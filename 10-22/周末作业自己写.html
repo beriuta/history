@@ -35,14 +35,16 @@
             margin: 40px;
             margin-top: 100px;
         }
-
+        table ,#add {
+            font-size: 20px;
+        }
         /*#cancel,#submit {*/
         /*bottom: auto;*/
         /*}*/
     </style>
 </head>
 <body>
-<button id="add">新增</button>
+<button id="add" class="btn btn-info">新增</button>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -58,8 +60,8 @@
         <td>赵本山</td>
         <td>说相声</td>
         <td>
-            <button class="fire">删除</button>
-            <button class="edit">编辑</button>
+            <button class="fire btn btn-danger">删除</button>
+            <button class="edit btn btn-warning">编辑</button>
         </td>
     </tr>
     <tr>
@@ -67,8 +69,8 @@
         <td>郭德纲</td>
         <td>说哲学</td>
         <td>
-            <button class="fire">删除</button>
-            <button class="edit">编辑</button>
+            <button class="fire btn btn-danger">删除</button>
+            <button class="edit btn btn-warning">编辑</button>
         </td>
     </tr>
     <tr>
@@ -76,8 +78,8 @@
         <td>小沈阳</td>
         <td>唱歌</td>
         <td>
-            <button class="fire">删除</button>
-            <button class="edit">编辑</button>
+            <button class="fire btn btn-danger">删除</button>
+            <button class="edit btn btn-warning">编辑</button>
         </td>
     </tr>
     <tr>
@@ -85,8 +87,8 @@
         <td>沈腾</td>
         <td>耍帅</td>
         <td>
-            <button class="fire">删除</button>
-            <button class="edit">编辑</button>
+            <button class="fire btn btn-danger">删除</button>
+            <button class="edit btn btn-warning">编辑</button>
         </td>
     </tr>
     <tr>
@@ -94,8 +96,8 @@
         <td>谢大脚</td>
         <td>跳舞</td>
         <td>
-            <button class="fire">删除</button>
-            <button class="edit">编辑</button>
+            <button class="fire btn btn-danger">删除</button>
+            <button class="edit btn btn-warning">编辑</button>
         </td>
     </tr>
     <tr>
@@ -103,8 +105,8 @@
         <td>赵四</td>
         <td>舞神</td>
         <td>
-            <button class="fire">删除</button>
-            <button class="edit">编辑</button>
+            <button class="fire btn btn-danger">删除</button>
+            <button class="edit btn btn-warning">编辑</button>
         </td>
     </tr>
     </tbody>
@@ -163,7 +165,7 @@
         $('#name,#hobby').val('')
     });
     //5.点击提交按钮，添加进入input内容，另起一行
-    $('.submit').click(function () {
+    $('#submit').click(function () {
         var namevalue = $('#name').val();
         var hobbyvalue = $('#hobby').val();
         // 判断是编辑还是提交

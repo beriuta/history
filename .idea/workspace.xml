@@ -122,7 +122,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="26" />
-          <entry key="html" value="94" />
+          <entry key="html" value="97" />
           <entry key="jpg" value="1" />
           <entry key="js" value="9" />
           <entry key="py" value="34" />
@@ -134,7 +134,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="26" />
-          <entry key="HTML" value="94" />
+          <entry key="HTML" value="97" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="9" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -147,7 +147,7 @@
         <counts>
           <entry key="css" value="2570" />
           <entry key="dummy" value="27" />
-          <entry key="html" value="31245" />
+          <entry key="html" value="33039" />
           <entry key="js" value="60" />
           <entry key="py" value="8789" />
           <entry key="text" value="69" />
@@ -157,7 +157,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2570" />
-          <entry key="HTML" value="31245" />
+          <entry key="HTML" value="33039" />
           <entry key="JavaScript" value="60" />
           <entry key="PLAIN_TEXT" value="102" />
           <entry key="Python" value="8789" />
@@ -167,13 +167,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/10-22/周末作业自己写.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-22/登录示例.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="199" column="46" selection-start-line="199" selection-start-column="46" selection-end-line="199" selection-end-column="46" />
+            <state relative-caret-position="364">
+              <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
               <folding>
-                <element signature="e#2614#2621#1" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/10-22/信息手机卡页面.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10-22/bootstrap常用样式.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+              <folding>
+                <element signature="e#1312#1316#1" expanded="true" />
+                <element signature="e#1319#1323#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,9 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/10-11/代码量.py" />
-        <option value="$PROJECT_DIR$/10-11/练习.html" />
-        <option value="$PROJECT_DIR$/10-12/练习.html" />
         <option value="$PROJECT_DIR$/10-12/小米商城样式.css" />
         <option value="$PROJECT_DIR$/10-13/小米商城.html" />
         <option value="$PROJECT_DIR$/10-13/博客.js" />
@@ -247,7 +271,10 @@
         <option value="$PROJECT_DIR$/10-19/周末作业.html" />
         <option value="$PROJECT_DIR$/10-22/代码量.py" />
         <option value="$PROJECT_DIR$/10-22/周末作业.html" />
+        <option value="$PROJECT_DIR$/10-22/登录示例.html" />
+        <option value="$PROJECT_DIR$/10-22/bootstrap常用样式.html" />
         <option value="$PROJECT_DIR$/10-22/周末作业自己写.html" />
+        <option value="$PROJECT_DIR$/10-22/信息手机卡页面.html" />
       </list>
     </option>
   </component>
@@ -262,7 +289,9 @@
     <option name="width" value="958" />
     <option name="height" value="1030" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -533,15 +562,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/10-13/小米商城样式.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="101" column="48" lean-forward="true" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10-13/xiaomi-all.css" />
-    <entry file="file://$PROJECT_DIR$/10-13/xiaomi-mall.html" />
     <entry file="file://$PROJECT_DIR$/10-12/练习.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -850,12 +870,45 @@
     <entry file="file://$PROJECT_DIR$/10-22/jquery.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/10-22/bootstrap常用样式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+          <folding>
+            <element signature="e#1312#1316#1" expanded="true" />
+            <element signature="e#1319#1323#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/10-22/周末作业自己写.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="199" column="46" selection-start-line="199" selection-start-column="46" selection-end-line="199" selection-end-column="46" />
+        <state relative-caret-position="88">
+          <caret line="131" column="6" lean-forward="true" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
           <folding>
             <element signature="e#2614#2621#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-22/登录示例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-22/信息手机卡页面.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
