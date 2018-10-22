@@ -11,9 +11,10 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: rgba(0,0,0,0.3);
+            background-color: rgba(0, 0, 0, 0.3);
             z-index: 99;
         }
+
         .modals {
             width: 400px;
             height: 300px;
@@ -25,15 +26,18 @@
             margin-left: -220px;
             z-index: 100;
         }
+
         .hide {
             display: none;
         }
+
         #input-box {
             margin: 40px;
             margin-top: 100px;
         }
+
         /*#cancel,#submit {*/
-            /*bottom: auto;*/
+        /*bottom: auto;*/
         /*}*/
     </style>
 </head>
@@ -131,15 +135,17 @@
         $('#name,#hobby').val('');
         $('.cover,.modals').addClass('hide')
     }
+
     // 封装一个函数，出现模态框的函数
-    function showModal(){
+    function showModal() {
         $('.cover,.modals').removeClass('hide');
     }
-    //封装一个函数，里面是用户输入input的内容
-    function textInput(){
-        var namevalue = $('#name').val();
-        var hobbyvalue = $('#hobby').val();
-    }
+
+    // //封装一个函数，里面是用户输入input的内容
+    // function textInput(){
+    //     var namevalue = $('#name').val();
+    //     var hobbyvalue = $('#hobby').val();
+    // }
     // 1.绑定新增点击事件，出现模态框
     $('#add').click(function () {
         showModal();
@@ -149,7 +155,7 @@
         hideModal();
     });
     //3.点击清除，所在的行全部清除
-    $('body').on('click','.fire',function () {
+    $('body').on('click', '.fire', function () {
         $(this).parent().parent().remove()
     });
     //4.点击重置按钮，input框内的内容全部清除
@@ -158,31 +164,47 @@
     });
     //5.点击提交按钮，添加进入input内容，另起一行
     $('.submit').click(function () {
-        textInput();
+        var namevalue = $('#name').val();
+        var hobbyvalue = $('#hobby').val();
         // 判断是编辑还是提交
         var $editTr = $(this).data('editor');
-        if ($editTr ===undefined){
+        if ($editTr === undefined) {
             // 判断input框一开始的内容是否为空，如果是空就是提交，如果不是空的就是编辑
             var trEle = document.createElement('tr');  //创建一个tr标签把内容填写进去
             $(trEle).append('<td><input type="checkbox"></td>');  //添加一个td
             $(trEle).append('<td>' + namevalue + '</td>');   //添加一个td的内容
-            var tdTmp =  document.createElement('td');  //在每个tdTmp后面添加td标签
+            var tdTmp = document.createElement('td');  //在每个tdTmp后面添加td标签
             tdTmp.innerText = hobbyvalue;
             $(trEle).append(tdTmp);  //在每个trEle的后面添加一个trTMp
             $(trEle).append('<td><button class="fire">删除</button> <button class="edit">编辑</button></td>');
             //把上一步的tr追加到表格的tbody后面
             $('tbody').append(trEle);
+        } else {
+            // 进入编辑模式
+            // 取出用户之前编辑的哪一行
+            //修改对应td的文本
+            $editTr.children().eq(1).text(namevalue);
+            $editTr.children().eq(2).text(hobbyvalue);
+            //清空submit按钮身上的data
+            $('#submit').removeData('editor');
         }
+        //隐藏模态框，清空输入框
+        hideModal();
+    });
+    //点击编辑要做的事
+    //绑定编辑点击事件，弹出模态框
+    $('body').on('click', '.edit', function () {
+        showModal();
+        //获取当前行的姓名和爱好
+        var $currenTr = $(this).parent().parent();  //点击按钮的父标签的父标签
+        var $name = $currenTr.children().eq(1).text();
+        var $hobby = $currenTr.children().eq(2).text();
+        // 把上一步获取的值设置给input标签
+        $('#name').val($name);
+        $('#hobby').val($hobby);  //text获取的是HTML的文本内容，val是获取input用户输入的内容
+        //给模态框中提交按钮绑定一个data
+        $('#submit').data('editor', $currenTr);
     })
-
-
-
-
-
-
-
-
-
 
 
 </script>
