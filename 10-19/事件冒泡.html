@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>
+        <button id="b1">点我啊</button>
+    </p>
+</div>
+<script src="jquery.js"></script>
+<script>
+    $('div').click(function () {
+        alert('我是div')
+    });
+    $('p').click(function () {
+        alert('我是一个p标签')
+    });
+    $('#b1').click(function (e) {  //不加这个事件冒泡按钮会先出现p标签，然后出现div标签
+        // e在这里是个形参，表示事件本身
+        alert('我是一个按钮');
+        e.stopPropagation();
+        // 或者用return false
+    })
+
+</script>
+</body>
+</html>

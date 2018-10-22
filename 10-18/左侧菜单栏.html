@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .item {
+            /*height: 50px;*/ /*不定把高度限制住*/
+            width: 234px;
+            background-color: teal;
+            border-bottom: 1px solid white;
+            cursor: pointer;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            padding: 15px;
+        }
+
+        .body {
+            text-align: center;
+            color: white;
+            background-color: lightblue;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="item">
+        <div class="title">手机</div>
+        <div class="body hide">
+            <div>苹果</div>
+            <div>华为</div>
+            <div>三星</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="title">电脑</div>
+        <div class="body hide">
+            <div>苹果</div>
+            <div>联想</div>
+            <div>三星</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="title">服务</div>
+        <div class="body hide">
+            <div>在线客服</div>
+            <div>机器人服务</div>
+            <div>人工服务</div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="jquery.js"></script>
+<script>
+    // $('.title').on('click', function () {
+    //     $('.body').addClass('hide');
+    //     $(this).next().removeClass('hide')
+    // )
+    // }
+    $('.title').on('click',function () {
+        $('.body').addClass('hide');
+        $(this).next().removeClass('hide')
+    })
+</script>
+</html>

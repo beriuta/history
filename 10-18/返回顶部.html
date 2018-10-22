@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>位置相关返回顶部</title>
+    <link rel="stylesheet" href="../10-17/iconfont.css">
+    <style>
+        body {
+            margin:0;
+        }
+        .c1 {
+            position: relative;
+            height: 4000px;
+            width: 100%;
+            background-color: lightblue;
+        }
+        #icon {
+            position: fixed;
+            font-size: 100px;
+            border-radius: 50%;
+            right: 15px;
+            bottom:15px;
+            cursor: pointer;
+
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="c1">
+    <div class="iconfont hide" id="icon">&#xe623;</div>
+</div>
+<!--<button>返回顶部</button>-->
+<script src="jquery.js"></script>
+<script>
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            $('#icon').removeClass('hide');
+        }else {
+            $('#icon').addClass('hide');
+        }
+        // console.log('dd')
+    });
+    $('#icon').on('click',function () {
+        $(window).scrollTop(0);
+    })
+</script>
+</body>
+</html>

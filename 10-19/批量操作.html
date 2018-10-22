@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>郭德纲</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>赵本山</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>白云</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>黑土</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>昨天今天明天</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>小沈阳</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>小宝</td>
+        <td>
+            <select> <!--select标签是一个包含多项选择的下拉列表-->
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="jquery.js"></script>
+<script>
+    var flag = false;  //当shift没有被按下时，是false，被按下时全局变量为true
+    $(window).keydown(function (e) {
+        if (e.keyCode === 16) {
+            flag = true;
+        }
+    });
+    //当shift被抬起来的时候，全局变量为false
+    $(window).keyup(function (e) {
+        if (e.keyCode === 16) {
+            flag = false;
+        }
+    });
+    //按下shift键进入批量编辑模式
+    //给select标签绑定change事件
+    $('td>select').change(function () {
+        //判断是否进入批量编辑模式
+        //如何判断shift键被按下
+        //here判断当前行被选中
+        var isChecked = $(this).parent().prev().prev().find(':checkbox').prop('checked');
+        //prev匹配前一个元素,prop是用于检索属性值 attr('checked'): checkedprop('checked'): true
+        if (flag && isChecked) {
+            // 取到当前select选中的值
+            var checkedValue = $(this).val();
+            // 找到所有被选中的行
+            // 把选中的select置为和当前选中的值一样
+            $('tr:has(input:checked)').find('select').val(checkedValue);
+            // has是检测某个元素是否在另一个元素中，checked是否在tr内，如果在就找到select修改内容
+
+        }
+
+
+    })
+
+
+</script>
+</body>
+</html>

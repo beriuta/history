@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p id="p1">
+        <button class="c1">点我</button>
+    </p>
+</div>
+<script src="jquery.js"></script>
+<script>
+    // // 找到页面上所有的.c1样式类的按钮，绑定事件
+    // $('#p1').on('click','.c1',function () {
+    //     alert('我是一个按钮')  //给p1设置样式，点击button会到自己父级寻找绑定样式，
+    // })
+    // 借助事件冒泡，来给未来的标签绑定事件    --->  事件委托
+    $('#p1').on('click', '.c1', function () {    //传三个参数
+        console.log(this); //查看触发事件的那个标签  //显示<button class="c1">点我</button>
+        console.log('我是一个按钮')
+    });
+    //在页面上添加一个.c1样式类的按钮
+    $('#p1').append(' <button class="c1">点我2</button>');  //此样式也有被绑定的点击事件
+
+
+</script>
+</body>
+</html>

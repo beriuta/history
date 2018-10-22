@@ -1,0 +1,574 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+    <!--<style>-->
+        <!--/*当body里面的标签没有属于自己的样式时，用body的样式，如果有，则用自己的*/-->
+        <!--p {color: darkgray}-->
+        <!--body {color: indianred}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p>我是一个p标签</p>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>CSS背景</title>-->
+    <!--<style>-->
+        <!--.c1 {-->
+            <!--height: 100px;-->
+            <!--width: 100px;-->
+            <!--/*字体颜色*/-->
+            <!--color: gray;-->
+            <!--/*添加背景色*/-->
+            <!--background-color: darkgrey;-->
+        <!--}-->
+        <!--.c2 {-->
+            <!--height: 600px;-->
+            <!--width: 600px;-->
+            <!--/*no-repeat:图片不平铺 center:是居中，如果像素不足600px，则会重复铺满,bottom:下面-->
+            <!--left top ：左上，left center：左中，left bottom：左下，以此类推，中上，中中，中下，右上，右中，右下*/-->
+            <!--background: url("hlw.png") no-repeat center bottom;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1">div标签</div>-->
+<!--<div class="c2">div标签</div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>鼠标滚动背景不动</title>-->
+    <!--<style>-->
+        <!--* {-->
+            <!--margin: 0;-->
+        <!--}-->
+        <!--.box {-->
+            <!--width: 100%;-->
+            <!--height: 500px;-->
+            <!--background:url("jianyue2.jpg") no-repeat center center;-->
+            <!--background-attachment: fixed;-->
+        <!--}-->
+        <!--.c1 {-->
+            <!--height: 500px;-->
+            <!--background-color: darkgray;-->
+        <!--}-->
+        <!--.d2 {-->
+            <!--height: 500px;-->
+            <!--background-color: darksalmon;-->
+        <!--}-->
+        <!--.d3 {-->
+            <!--height: 500px;-->
+            <!--background-color: bisque;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1"></div>-->
+<!--<div class="box"></div>-->
+<!--<div class="d2"></div>-->
+<!--<div class="d3"></div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>边框实例</title>-->
+    <!--<style>-->
+        <!--.c1 {-->
+            <!--height: 100px;-->
+            <!--width: 100px;-->
+            <!--/*dashed:虚线*/-->
+            <!--border: 5px dashed lightslategrey;-->
+        <!--}-->
+        <!--.c2 {-->
+            <!--width: 100%;-->
+            <!--height: 50px;-->
+            <!--/*solid:实线*/-->
+            <!--border-left: 10px solid darkgray;-->
+        <!--}-->
+        <!--/*画一个圆*/-->
+        <!--.c3 {-->
+            <!--height: 100px;-->
+            <!--width: 100px;-->
+            <!--background-color: bisque;-->
+            <!--/*border-radius:圆形*/-->
+            <!--border-radius: 50%;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1"></div>-->
+<!--<hr>-->
+<!--<div class="c2"></div>-->
+<!--<hr>-->
+<!--<div class="c3"></div>-->
+<!--<div class="c4"></div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>sss</title>-->
+    <!--<style>-->
+
+        <!--#p1 {color: red}-->
+        <!--p {color: aqua !important;}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p id="p1">啊啊啊啊啊啊啊啊啊啊</p>-->
+<!--</body>-->
+<!--</html>-->
+<!--l1 {-->
+    <!--border-width:2px;-->
+    <!--border-style:solid;-->
+    <!--border-color:red;-->
+<!--}-->
+<!--通用使用的简写方式：-->
+<!--l1 {-->
+    <!--border:2px solid red;-->
+<!--}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>边框样式</title>-->
+    <!--<style>-->
+        <!--#p1 {-->
+            <!--border-top-style: dotted;-->
+            <!--border-top-color: lightslategrey;-->
+            <!--border-right-style: solid;-->
+            <!--border-bottom-style: dotted;-->
+            <!--border-left-style: none;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<bidy>-->
+    <!--<p id="p1">aaaaaaaaaaaa</p>-->
+<!--</bidy>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>display示例</title>-->
+    <!--<style>-->
+        <!--.c1 {-->
+            <!--height: 100px;-->
+            <!--width: 200px;-->
+            <!--background-color: bisque;-->
+            <!--border: 1px solid black;-->
+            <!--/*display: 默认为none 让块级标签变成内联标签*/-->
+            <!--display: inline-block;-->
+            <!--margin: 20px;-->
+        <!--}-->
+        <!--.c2 {-->
+            <!--height: 100px;-->
+            <!--width: 200px;-->
+            <!--background-color: lightslategrey;-->
+            <!--/*设置边框1像素，实线，黑色的*/-->
+            <!--border: 1px solid black;-->
+            <!--display: block;-->
+            <!--/*设置方块之间的边距*/-->
+            <!--margin: 20px;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1"></div>-->
+<!--<div class="c1"></div>-->
+<!--<div class="c1"></div>-->
+<!--<hr>-->
+<!--<span class="c2"></span>-->
+<!--<span class="c2" style="...."></span>-->
+<!--<span class="c2"></span>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>CSS盒子模型</title>-->
+    <!--<style>-->
+        <!--body {-->
+            <!--margin: 0;-->
+        <!--}-->
+        <!--.c1 {-->
+            <!--height: 200px;-->
+            <!--width: 300px;-->
+            <!--background-color: lightcoral;-->
+            <!--/*border:边框*/-->
+            <!--border: 10px solid darkcyan;-->
+            <!--/*padding内填充*/-->
+            <!--padding: 20px;-->
+            <!--/*下面空出100像素*/-->
+            <!--/*margin-bottom: 100px;*/-->
+            <!--/*!*margin: 100px;*!*/-->
+            <!--/*margin: 10px 20px 30px 40px;*/-->
+            <!--/*!*上下10个像素，左右20个像素*!*/-->
+            <!--/*margin: 10px 20px;*/-->
+            <!--/*!*上10个像素，下30个像素，左右各20像素*!*/-->
+            <!--/*margin: 10px 20px 30px;*/-->
+        <!--}-->
+        <!--.c4,.c5 {-->
+            <!--height: 200px;-->
+            <!--width: 400px;-->
+            <!--/*设置一个高200宽400边长1像素的*/-->
+            <!--border: 1px solid darkcyan;-->
+        <!--}-->
+        <!--.c4 {-->
+            <!--margin-bottom: 20px;-->
+        <!--}-->
+        <!--.c5 {-->
+            <!--margin-top: 100px;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1">啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>-->
+<!--<div class="c1">呵呵哈哈哈或或或或</div>-->
+<!--<hr>-->
+<!--<div class="c4"></div>-->
+<!--<div class="c5"></div>-->
+<!--<div class="c23"></div>-->
+<!--</body>-->
+<!--</html>-->
+<!--.margin-test {-->
+    <!--margin-top:5px;-->
+    <!--margin-right:10px;-->
+    <!--margin-bottom:15px;-->
+    <!--margin-left:20px;-->
+<!--}-->
+<!--推荐使用简写：-->
+<!--.margin-test {-->
+    <!--margin:5px 10px 15px 20px;-->
+<!--}-->
+<!--.mycenter {-->
+    <!--margin:0 auto;  #auto按比例-->
+<!--}-->
+<!--.padding-test {-->
+    <!--padding-top:5px;-->
+    <!--padding-right:10px;-->
+    <!--padding-bottom:15px;-->
+    <!--padding-left:20px;-->
+<!--}-->
+<!--推荐使用简写：-->
+<!--.padding-test{-->
+    <!--padding:5px 10px 15px 20px;-->
+<!--}-->
+<!--.clearfix:after{-->
+    <!--content:"";-->
+    <!--display:block;-->
+    <!--clear:both;-->
+<!--}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>blog</title>-->
+    <!--<style>-->
+        <!--body {-->
+            <!--margin: 0;-->
+        <!--}-->
+        <!--.left {-->
+            <!--width: 20%;-->
+            <!--height: 1000px;-->
+            <!--background-color: darkgray;-->
+            <!--float: left;-->
+        <!--}-->
+        <!--.right {-->
+            <!--width: 80%;-->
+            <!--height: 1000px;-->
+            <!--background-color: darkcyan;-->
+            <!--float: right;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="left"></div>-->
+<!--<div class="right"></div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>float的负作用</title>-->
+    <!--<style>-->
+        <!--body {-->
+            <!--margin:0-->
+        <!--}-->
+        <!--.c1 {-->
+            <!--border: 1px solid black;-->
+        <!--}-->
+        <!--.c2 {-->
+            <!--height:100px;-->
+            <!--width:200px;-->
+            <!--background-color: red;-->
+            <!--border: 1px solid black;-->
+        <!--}-->
+        <!--.c3 {-->
+            <!--width:100%;-->
+            <!--height:200px;-->
+            <!--background-color: deeppink;-->
+        <!--}-->
+        <!--.left {-->
+            <!--float: right;-->
+        <!--}-->
+        <!--.right {-->
+            <!--float:right;-->
+        <!--}-->
+        <!--.clearfix:after {-->
+            <!--content:'';-->
+            <!--display: block;-->
+            <!--clear:both;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1 clearfix">-->
+    <!--<div class="c2 left"></div>-->
+    <!--<div class="c2 right"></div>-->
+<!--</div>-->
+<!--<div class="c3"></div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>overflow示例</title>-->
+    <!--<style>-->
+        <!--.c1 {-->
+            <!--width: 2000px;-->
+            <!--height: 50px;-->
+            <!--border: 1px solid black;-->
+            <!--overflow: scroll;-->
+        <!--}-->
+        <!--.avatar {-->
+            <!--height: 120px;-->
+            <!--width: 120px;-->
+            <!--border: 4px solid green;-->
+            <!--border-radius: 50%;-->
+            <!--overflow: hidden;-->
+        <!--}-->
+        <!--.avatar>img {-->
+            <!--width: 100%;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1">-->
+    <!--在苍茫的大海上，狂风卷记着乌云，在乌云和大海之间，海燕像黑色的闪电，在高傲的飞翔。-->
+<!--</div>-->
+<!--<hr>-->
+<!--<div class="avatar">-->
+    <!--<img src="hlw.png" alt="">-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>相对定位</title>-->
+    <!--<style>-->
+        <!--body {-->
+            <!--margin: 0;-->
+        <!--}-->
+        <!--.c1,.c2 {-->
+            <!--height: 200px;-->
+            <!--wight: 200px;-->
+        <!--}-->
+        <!--.c1 {-->
+            <!--background-color: darkcyan;-->
+        <!--}-->
+        <!--.c2 {-->
+            <!--background-color: lightcoral;-->
+            <!--position: relative;-->
+            <!--left: 200px;-->
+            <!--top: -200px;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1"></div>-->
+<!--<div class="c2"></div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>固定定位</title>-->
+    <!--<style>-->
+        <!--body {-->
+            <!--margin:0;-->
+        <!--}-->
+        <!--.c1 {-->
+            <!--border: 1px solid black;-->
+            <!--width: 80px;-->
+            <!--height: 40px;-->
+            <!--/*将行高设置成标签的高度可以实现垂直居中*/-->
+            <!--line-height: 40px;-->
+            <!--text-align: center;-->
+            <!--position: fixed;-->
+            <!--bottom: 50px;-->
+            <!--right: 50px;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="c1">返回顶部</div>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>模态框</title>-->
+    <!--<style>-->
+        <!--.cover {-->
+            <!--position: fixed;-->
+            <!--top: 0;-->
+            <!--right: 0;-->
+            <!--bottom: 0;-->
+            <!--left: 0;-->
+            <!--background-color: lightslategrey;-->
+            <!--z-index: 99;-->
+            <!--/*设置透明度*/-->
+            <!--opacity: 0.4;-->
+        <!--}-->
+        <!--.modal {-->
+            <!--background-color: gainsboro;-->
+            <!--height: 300px;-->
+            <!--width: 400px;-->
+            <!--z-index: 1000;-->
+            <!--position: absolute;-->
+            <!--top: 50%;-->
+            <!--left: 50%;-->
+            <!--margin-top: -150px;-->
+            <!--margin-left: -200px;-->
+
+        <!--}-->
+        <!--.modal>p {-->
+            <!--margin:0 auto;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+    <!--在苍茫的大海上，狂风卷记着乌云，在乌云和大海之间，海燕像黑色的闪电，在高傲的飞翔-->
+<!--</div>-->
+<!--<div class="cover"></div>-->
+<!--<div class="modal">-->
+    <!--<form action="">-->
+        <!--<p><input type="text"></p>-->
+        <!--<p><input type="text"></p>-->
+        <!--<p><input type="submit"></p>-->
+    <!--</form>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>顶部导航菜单</title>
+    <style>
+        /*清楚浏览器默认外边距和内填充*/
+        * {
+            margin: 0;
+            padding:0;
+        }
+        a {
+            /*去除a标签默认的下划线*/
+            text-decoration: none;
+        }
+        .nav {
+            background-color: black;
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            margin:0 auto;
+            text-align: center;
+        }
+        ul {
+            /*删除列表默认的圆点样式*/
+            list-style-type: none;
+            /*删除列表默认的外边距*/
+            margin: 0;
+            /*删除列表默认的内填充*/
+            padding: 0;
+        }
+        /*li元素向左浮动*/
+        li {
+            float: left;
+        }
+        li>a {
+            /*让链接显示为块级标签*/
+            display: block;
+            /*设置左右各15像素的填充*/
+            padding: 0 15px;
+            /*设置字体颜色*/
+            color: #b0b0b0;
+            /*设置行高*/
+            line-height: 40px;
+        }
+        /*鼠标移上去变白色*/
+        li>a:hover {
+            color: #fff;
+            display: block;
+            clear: both;
+            text-align: center;
+        }
+        .fool {
+            margin: 0 auto;
+            width: 750px;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航栏 开始-->
+<div class="nav">
+    <div class="fool">
+        <ul class="clearfix">
+            <li><a href="">玉米商城</a></li>
+            <li><a href="">大玉米</a></li>
+            <li><a href="">小玉米</a></li>
+            <li><a href="">甜玉米</a></li>
+            <li><a href="">黏玉米</a></li>
+            <li><a href="">黑玉米</a></li>
+            <li><a href="">黄玉米</a></li>
+        </ul>
+    </div>
+</div>
+<!--顶部导航栏 结束-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

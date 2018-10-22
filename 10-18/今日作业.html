@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <style>
+        .cover {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.3);
+            z-index: 99;
+        }
+        .modal {
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -200px;
+            z-index: 101;
+        }
+        .close {
+            float: right;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .hide {
+            display: none;
+        }
+        .style2 {
+            margin-left: 40px;
+            margin-top: 80px;
+            /*padding: 40px;*/
+            /*margin: 0 auto;*/
+        }
+        .name {
+            /*padding: 5px;*/
+        }
+        .cancel {
+            position: absolute;
+            right: 15px;
+            top: 230px;
+        }
+         .submit {
+            position: absolute;
+            right: 80px;
+            top: 230px;
+         }
+
+        .close {
+            float: right;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .error {
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+<button id="add">新增</button>
+<div class="cover hide"></div>
+<div class="modal hide">
+    <div class="close">
+        <div>x</div>
+    </div>
+    <div class="style2">
+        <div>
+            <label>姓名
+                <input type="text" name="name">
+            </label>
+            <span class="error"></span>
+        </div>
+        <div>
+            <label>爱好
+                <input type="text" name="hobby">
+            </label>
+            <span class="error"></span>
+        </div>
+        <div class="submit">
+            <input type="button" value="提交">
+        </div>
+        <div class="cancel">
+            <input type="button" value="重置">
+        </div>
+    </div>
+
+</div>
+<table border="1">
+   <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>爱好</th>
+        <th>操作</th>
+    </tr>
+   </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>金老板</td>
+        <td>开车</td>
+        <td><button class="fire">开除</button></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>景女神</td>
+        <td>茶道</td>
+        <td><button class="fire">开除</button></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>苑昊（苑局）</td>
+        <td>不洗头、不翻车、不要脸</td>
+        <td><button class="fire">开除</button></td>
+    </tr>
+    </tbody>
+</table>
+<script src="jquery.js"></script>
+<script>
+    // 点开模态框
+    $('#add').on('click',function () {
+        $('.cover,.modal').removeClass('hide')
+    });
+    //收起模态框
+    $('.close').on('click',function () {
+        $('#name,#hobby').val('');
+        $('.cover,.modal').addClass('hide')
+    });
+    //提交姓名和爱好的input框不能为空
+    $('.submit').on('click', function () {
+        var $inputEles = $('label>input');
+        for (var i=0;i<$inputEles;i++);{
+            var $tmp=$($inputEles[i]);  //DOM对象-->jQuery对象
+            if (!$tmp.val().trim()) {
+                var prefix = $tmp.parent().text().trim();
+                $tmp.parent().next().text(prefix + '不能为空');
+            }
+        }
+
+    });
+    //给用户输入的input框绑定事件，当光标在input框时不会显示为空
+    var $inputEles = $('label>input');
+    for (var i =0;i<$inputEles.length;i++) {
+        $inputEles[i].onfocus = function () {
+            $(this).parent().next().text("")
+        }
+    }
+    //点击取消绑定事件
+    $('.cancel').on('click',function () {
+        var $inputEles = $('label>input');
+        for (var i=0;i<$inputEles;i++);{
+            $tam = $($inputEles[i]);
+            $tam.val('')
+        }
+    });
+    //点击删除，把一行删除
+    $('.fire').click(function () {
+        $(this).parent().parent().remove();
+    })
+</script>
+</body>
+</html>

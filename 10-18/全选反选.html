@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="all">全选</button>
+<button id="reverse">反选</button>
+<button id="cancel">取消</button>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>爱好</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>金老板</td>
+        <td>开车</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>景女士</td>
+        <td>茶道</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>苑耗</td>
+        <td>翻车</td>
+    </tr>
+    </tbody>
+</table>
+<script src="jquery.js"></script>
+<script>
+    $('#all').click(function () {
+        $('input:checkbox').prop('checked',true)  //prop是获取当前标签是否被选中，全部选中，统一修改布尔值
+    });   //全选
+    $('#cancel').click(function () {
+        $('input:checkbox').prop('checked',false)  //prop是获取当前标签是否被选中，全部选中，统一修改布尔值
+    }); //取消
+    $('#reverse').click(function () {
+        for(var i=0;i<$(':checkbox').length;i++){
+            var status = $($(':checkbox')[i]).prop('checked');  //获取原来选中与否的状态
+            $($(':checkbox')[i]).prop('checked',!status)  //把原来的状态修改成相反的
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+    <style>
+        .cover {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.3);
+            z-index: 99;
+        }
+        .modals {
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -220px;
+            z-index: 100;
+        }
+        .hide {
+            display: none;
+        }
+        #input-box {
+            margin: 40px;
+            margin-top: 100px;
+        }
+        /*#cancel,#submit {*/
+            /*bottom: auto;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<button id="add">新增</button>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>爱好</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>赵本山</td>
+        <td>说相声</td>
+        <td>
+            <button class="fire">删除</button>
+            <button class="edit">编辑</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>郭德纲</td>
+        <td>说哲学</td>
+        <td>
+            <button class="fire">删除</button>
+            <button class="edit">编辑</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>小沈阳</td>
+        <td>唱歌</td>
+        <td>
+            <button class="fire">删除</button>
+            <button class="edit">编辑</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>沈腾</td>
+        <td>耍帅</td>
+        <td>
+            <button class="fire">删除</button>
+            <button class="edit">编辑</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>谢大脚</td>
+        <td>跳舞</td>
+        <td>
+            <button class="fire">删除</button>
+            <button class="edit">编辑</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>赵四</td>
+        <td>舞神</td>
+        <td>
+            <button class="fire">删除</button>
+            <button class="edit">编辑</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="cover hide"></div>
+<div class="modals hide">
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div id="input-box">
+        <div class="form-group">
+            <label for="exampleInputName">用户名
+                <input type="text" id="name">
+            </label>
+        </div>
+        <div>
+            <label>爱好
+                <input type="text" id="hobby">
+            </label>
+        </div>
+        <button id="cancel" type="button" class="btn btn-warning">重置</button>
+        <button id="submit" type="button" class="btn btn-success">提交</button>
+    </div>
+</div>
+<script src="jquery.js"></script>
+<script>
+    // 封装一个函数，收起模态框的同时清空input里面的内容
+    function hideModal() {
+        $('#name,#hobby').val('');
+        $('.cover,.modals').addClass('hide')
+    }
+    // 封装一个函数，出现模态框的函数
+    function showModal(){
+        $('.cover,.modals').removeClass('hide');
+    }
+    //封装一个函数，里面是用户输入input的内容
+    function textInput(){
+        var namevalue = $('#name').val();
+        var hobbyvalue = $('#hobby').val();
+    }
+    // 1.绑定新增点击事件，出现模态框
+    $('#add').click(function () {
+        showModal();
+    });
+    // 2.点击x号，清除input内容并且收起模态框
+    $('.close').click(function () {
+        hideModal();
+    });
+    //3.点击清除，所在的行全部清除
+    $('body').on('click','.fire',function () {
+        $(this).parent().parent().remove()
+    });
+    //4.点击重置按钮，input框内的内容全部清除
+    $('#cancel').click(function () {
+        $('#name,#hobby').val('')
+    });
+    //5.点击提交按钮，添加进入input内容，另起一行
+    $('.submit').click(function () {
+        textInput();
+        // 判断是编辑还是提交
+        var $editTr = $(this).data('editor');
+        if ($editTr ===undefined){
+            // 判断input框一开始的内容是否为空，如果是空就是提交，如果不是空的就是编辑
+            var trEle = document.createElement('tr');  //创建一个tr标签把内容填写进去
+            $(trEle).append('<td><input type="checkbox"></td>');  //添加一个td
+            $(trEle).append('<td>' + namevalue + '</td>');   //添加一个td的内容
+            var tdTmp =  document.createElement('td');  //在每个tdTmp后面添加td标签
+            tdTmp.innerText = hobbyvalue;
+            $(trEle).append(tdTmp);  //在每个trEle的后面添加一个trTMp
+            $(trEle).append('<td><button class="fire">删除</button> <button class="edit">编辑</button></td>');
+            //把上一步的tr追加到表格的tbody后面
+            $('tbody').append(trEle);
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

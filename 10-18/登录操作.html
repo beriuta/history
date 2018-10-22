@@ -1,0 +1,107 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>登录操作</title>-->
+<!--<style>-->
+<!--.error {-->
+<!--color: salmon;-->
+<!--}-->
+<!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="">-->
+<!--<p>-->
+<!--<label>用户名-->
+<!--<input type="text" name="username">-->
+<!--</label>-->
+<!--<span class="error"></span>-->
+<!--</p>-->
+<!--<p>-->
+<!--<label>密码-->
+<!--<input id="pwd" type="password" name="password">-->
+<!--</label>-->
+<!--<span class="error"></span>-->
+<!--</p>-->
+<!--<p>-->
+<!--<button id="login" type="button">登录</button>-->
+<!--</p>-->
+<!--</form>-->
+<!--<script src="jquery.js"></script>-->
+<!--<script>-->
+<!--// 找到登录按钮，绑定点击事件-->
+<!--$('#login').on('click',function () {-->
+<!--// 找到所有需要判断的input输入框-->
+<!--var $inputAll = $('label>input');-->
+<!--// for循环依次做判断，判断input是否为空-->
+<!--for (var i=0;i<$inputAll.length;i++) {-->
+<!--var $tem = $($inputAll[i]);  //把DOM对象转换成jQuery对象-->
+<!--if (!$tem.val().trim()) {      //trim去掉首尾的空格-->
+<!--var prefix = $tem.parent().text().trim();  //其实就是label的密码跟用户名-->
+<!--$tem.parent().next().text(prefix + '不能为空')-->
+<!--}-->
+<!--}-->
+<!--});-->
+<!--//给获取用户输入的input框架绑定事件-->
+<!--var $inputAll = $('label>input');-->
+<!--for (var i=0;i<$inputAll.length;i++) {  //循环每一个input-->
+<!--$inputAll[i].onfocus = function () {  //聚焦事件，点击input框，光标闪就收回不能为空的提示-->
+<!--$(this).parent().next().text('');  //点击的input框的父标签的下一个标签的文字变成空，就是span的error-->
+<!--}-->
+<!--}-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error {
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <p>
+        <label>用户名
+            <input type="text" name="username">
+        </label>
+        <span class="error"></span>
+    </p>
+    <p>
+        <label>密码
+            <input type="password" name="pwd">
+        </label>
+        <span class="error"></span>
+    </p>
+    <button type="button" class="login">登录</button>
+</form>
+<script src="jquery.js"></script>
+<script>
+
+    // 绑定登录事件
+    $('.login').on('click', function () {
+        var $inputAll = $('label>input');
+        // for循环判断input输入框是否是空
+        for (var i = 0; i < $inputAll.length;i++){
+            var $input = $($inputAll[i]);  //DOM对象转换jQuery对象
+            if (!$input.val().trim()) {
+                var prefix = $input.parent().text().trim();
+                $input.parent().next().text(prefix + '不能为空');
+              }
+        }
+    });
+
+    // 绑定事件，获取焦点，点击input，不能为空的提示消失
+  var $inputeles = $('label>input');
+    for (var i=0;i<$inputeles.length;i++);{
+    $inputeles[i].onfocus=function () {
+        $(this).parent().next().text('');
+        }
+    }
+</script>
+</body>
+</html>
