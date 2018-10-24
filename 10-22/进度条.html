@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="progress">
+      <div id="d1" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;min-width: 2%">
+        0%
+      </div>
+    </div>
+    <button class="btn btn-success btn-sm" id="b1">开始</button>
+</div>
+
+
+<script src="jquery.js"></script>
+<script src="bootstrap-3.3.7/js/bootstrap.js"></script>
+<script>
+    // var $Text = $(this).prev().children().text();
+    // $('#b1').click(function () {
+    //     for (var i;i<$Text.length;i++)
+    //     $Text += 1;
+    //     console.log($Text)
+    // });
+    var n = 0;
+    var t;
+    // jQuery操作标签的CSS属性
+    function foo() {
+        $('#d1').css('width',n+'%').text(n + '%');
+        n += 1;
+        if (n > 100){
+            clearInterval(t)
+        }
+    }
+    // 点击开始按钮，让滚动条滚动起来
+    $('#b1').click(function () {
+        // 每隔一秒执行上面的代码
+        t = setInterval(foo,100);
+    });
+
+
+
+</script>
+</body>
+</html>

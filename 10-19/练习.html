@@ -5,6 +5,506 @@
     <title>Title</title>
 </head>
 <body>
+<form action="">
+    <input type="text" name="name" id="i1">
+    <input type="submit" value="提交" id="b1">
+</form>
+<script src="jquery.js"></script>
+<script>
+    $('#b1').on('click',function () {
+        var value = $('#i1').val().trim();  //获取input里面的内容，如果是空就阻止事件，不提交
+        if (!value) {}
+        return false;
+    })
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery.js"></script>
+<script>
+    //按键被按下
+    $(window).keydown(function () {  //键盘是作用于整个系统的
+        //打印下哪个按键被按下
+        // console.log(event.keyCode);
+        if (event.keyCode === 16){
+            console.log('shift被按下了')  //只有当shift被按下时，才会在控制台打印
+        }
+    });
+    //按键被抬起的事件
+    $(window).keyup(function (event) {
+        //打印下哪个按键被按下
+        // console.log(event.keyCode);
+        if (event.keyCode === 16){
+            console.log('shift被抬起了')
+        }
+    })
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>郭德纲</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>赵本山</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>白云</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>黑土</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>昨天今天明天</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>小沈阳</td>
+        <td>
+            <select>
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>小宝</td>
+        <td>
+            <select> <!--select标签是一个包含多项选择的下拉列表-->
+                <option value="1">上线</option>
+                <option value="2">下线</option>
+                <option value="3">停职</option>
+            </select>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="jquery.js"></script>
+<script>
+    var flag = false;  //当shift没有被按下时，是false，被按下时全局变量为true
+    $(window).keydown(function (e) {
+        if (e.keyCode === 16) {
+            flag = true;
+        }
+    });
+    //当shift被抬起来的时候，全局变量为false
+    $(window).keyup(function (e) {
+        if (e.keyCode === 16) {
+            flag = false;
+        }
+    });
+    //按下shift键进入批量编辑模式
+    //给select标签绑定change事件
+    $('td>select').change(function () {
+        //判断是否进入批量编辑模式
+        //如何判断shift键被按下
+        //here判断当前行被选中
+        var isChecked = $(this).parent().prev().prev().find(':checkbox').prop('checked');
+        //prev匹配前一个元素,prop是用于检索属性值 attr('checked'): checkedprop('checked'): true
+        if (flag && isChecked) {
+            // 取到当前select选中的值
+            var checkedValue = $(this).val();
+            // 找到所有被选中的行
+            // 把选中的select置为和当前选中的值一样
+            $('tr:has(input:checked)').find('select').val(checkedValue);
+            // has是检测某个元素是否在另一个元素中，checked是否在tr内，如果在就找到select修改内容
 
+        }
+
+
+    })
+
+
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cover {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 99;
+        }
+
+        .modal {
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -150px;
+            z-index: 1000;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<button id="add">新增</button>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>爱好</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>金老板</td>
+        <td>开车</td>
+        <td>
+            <button class="fire">开除</button>
+            <button class="editor">编辑</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>景女神</td>
+        <td>茶道</td>
+        <td>
+            <button class="fire">开除</button>
+            <button class="editor">编辑</button>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>苑昊（苑局）</td>
+        <td>不洗头、不翻车、不要脸</td>
+        <td>
+            <button class="fire">开除</button>
+            <button class="editor">编辑</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="cover hide"></div>
+<div class="modal hide">
+    <div>
+        <label>姓名：
+            <input type="text" id="name">
+        </label>
+    </div>
+    <div>
+        <label>爱好：
+            <input type="text" id="hobby">
+        </label>
+    </div>
+    <button id="cancel" type="button">取消</button>
+    <button id="submit" type="button">提交</button>
+
+</div>
+<script src="jquery.js"></script>
+<script>
+    // 定义一个清空输入框并且隐藏模态框的方法
+    function hideModal(){
+         // 1. 清空input的值
+        $("#name,#hobby").val('');
+        // 2. 隐藏起来
+        $(".cover,.modal").addClass('hide');
+    }
+    // 开除按钮的功能
+    $("table").on('click', '.fire', function () {
+        // 点击开除按钮要做的事儿
+        // 把当前行移除掉
+        //this  --> 触发当前点击事件的DOM对象
+        $(this).parent().parent().remove();  // 链式操作
+    });
+    //编辑按钮的功能
+    $('table').on('click','.editor',function () {
+        //点击编辑要做的事情
+        //修改name跟hobby
+        //this  -->触发当前点击事件的DOM对象
+        $(".cover,.modal").removeClass('hide');
+        // var $tem=$(this).parent().prev().val();
+        // console.log($tem)
+        var name = $("#name").val();
+        var hobby = $("#hobby").val();
+        console.log(name,hobby)
+    });
+    // 新增按钮的功能
+    $("#add").click(function () {
+        // 点击新增按钮要做的事儿
+        // 1. 移除cover和modal的hide样式
+        $(".cover,.modal").removeClass('hide');
+    });
+    // 点击modal中的cancel按钮
+    $("#cancel").click(function () {
+       hideModal();
+    });
+
+    // 点击modal中的submit按钮
+    $("#submit").click(function () {
+        // 1. 获取用户输入的值
+        var name = $("#name").val();
+        var hobby = $("#hobby").val();
+        // 2. 隐藏模态框，清空输入框
+        hideModal();
+        // 3. 创建一个tr标签，把数据塞进去
+        var trEle = document.createElement("tr");
+        $(trEle).append('<td><input type="checkbox"></td>');
+        $(trEle).append('<td>' + name + '</td>');
+        var tdTmp = document.createElement('td');  //创建指定文本的按钮
+        tdTmp.innerText = hobby;  //你需要在按钮元素后添加文本节点
+        $(trEle).append(tdTmp);
+        $(trEle).append('<td><button class="fire">开除</button></td>');
+        // 4. 把上一步的tr追加到表格的tbody后面
+        $('tbody').append(trEle);
+    });
+    //  // 点击modal中的submit按钮
+    // $("#submit").on('click', function () {
+    //     // 1. 获取用户输入的值
+    //     var name = $("#name").val();
+    //     var hobby = $("#hobby").val();
+    //     // 2. 隐藏模态框，清空输入框
+    //     hideModal();
+    //     // 3. 创建一个tr标签，把数据塞进去
+    //     var trEle = document.createElement("tr");
+    //     $(trEle).append('<td><input type="checkbox"></td>');
+    //     $(trEle).append('<td>' + name + '</td>');
+    //     var tdTmp = document.createElement('td');
+    //     tdTmp.innerText = hobby;
+    //     $(trEle).append(tdTmp);
+    //     $(trEle).append('<td><button class="fire">开除</button></td>')
+    //     // 4. 把上一步的tr追加到表格的tbody后面
+    //     $('tbody').append(trEle);
+    // })
+
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p id="p1">
+        <button class="c1">点我</button>
+    </p>
+</div>
+<script src="jquery.js"></script>
+<script>
+    // // 找到页面上所有的.c1样式类的按钮，绑定事件
+    // $('#p1').on('click','.c1',function () {
+    //     alert('我是一个按钮')  //给p1设置样式，点击button会到自己父级寻找绑定样式，
+    // })
+    // 借助事件冒泡，来给未来的标签绑定事件    --->  事件委托
+    $('#p1').on('click', '.c1', function () {    //传三个参数
+        console.log(this); //查看触发事件的那个标签  //显示<button class="c1">点我</button>
+        console.log('我是一个按钮')
+    });
+    //在页面上添加一个.c1样式类的按钮
+    $('#p1').append(' <button class="c1">点我2</button>');  //此样式也有被绑定的点击事件
+
+
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>
+        <button id="b1">点我啊</button>
+    </p>
+</div>
+<script src="jquery.js"></script>
+<script>
+    $('div').click(function () {
+        alert('我是div')
+    });
+    $('p').click(function () {
+        alert('我是一个p标签')
+    });
+    $('#b1').click(function (e) {  //不加这个事件冒泡按钮会先出现p标签，然后出现div标签
+        // e在这里是个形参，表示事件本身
+        alert('我是一个按钮');
+        e.stopPropagation();
+        // 或者用return false
+    })
+
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>哈啊</p>
+<input type="button" value="人员" name="renyuan">
+<div id="b2">人员</div>
+<script src="jquery.js"></script>
+<script>
+    $('input').on('click',function () {
+        $('div').data('greeting','hello world')
+    })
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            height: 40px;
+            width: 100%;
+            background-color: #b0b0b0;
+            position: fixed;
+            top: 0;
+        }
+        .nav ul {
+            list-style-type: none;
+            line-height: 40px;
+        }
+        .nav li{
+            float:left;
+            padding: 0 10px;
+            color: black;
+            position: relative;
+        }
+        .nav li:hover{
+            background-color: gainsboro;
+            color: black;
+        }
+        .clearfix:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .son {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            height: 50px;
+            width: 100px;
+            background-color: beige;
+            display: none;
+        }
+        .hover .son {
+            display: block;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul class="clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>购物车
+            <p class="son">
+                你太穷了
+            </p>
+        </li>
+    </ul>
+</div>
+<script src="jquery.js"></script>
+<script>
+    $('.nav li').hover(function () {
+        $(this).addClass('hover');
+    },
+    function () {
+        $(this).removeClass('hover');
+    });
+</script>
 </body>
 </html>
