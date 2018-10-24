@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f75f9a20-1858-44e9-97f3-88e04559e521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-24/练习题.py" beforeDir="false" afterPath="$PROJECT_DIR$/10-24/练习题.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Myset/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Myset/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-24/HomeWork.py" beforeDir="false" afterPath="$PROJECT_DIR$/10-24/wsgiref版web开发.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +129,7 @@
           <entry key="html" value="136" />
           <entry key="jpg" value="1" />
           <entry key="js" value="15" />
+          <entry key="md" value="1" />
           <entry key="py" value="44" />
           <entry key="sql" value="1" />
           <entry key="text" value="1" />
@@ -143,6 +142,7 @@
           <entry key="HTML" value="136" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="15" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="44" />
           <entry key="Scratch" value="1" />
@@ -152,10 +152,10 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2631" />
-          <entry key="dummy" value="31" />
+          <entry key="dummy" value="46" />
           <entry key="html" value="35719" />
           <entry key="js" value="60" />
-          <entry key="py" value="12939" />
+          <entry key="py" value="13004" />
           <entry key="text" value="69" />
           <entry key="txt" value="6" />
         </counts>
@@ -165,8 +165,8 @@
           <entry key="CSS" value="2631" />
           <entry key="HTML" value="35719" />
           <entry key="JavaScript" value="60" />
-          <entry key="PLAIN_TEXT" value="106" />
-          <entry key="Python" value="12939" />
+          <entry key="PLAIN_TEXT" value="121" />
+          <entry key="Python" value="13004" />
         </counts>
       </usages-collector>
     </session>
@@ -197,23 +197,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/10-24/HomeWork.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/10-24/wsgiref版web开发.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1240">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="124">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1540387483860" expanded="true" signature="552:620" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/10-24/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-89" />
+            <state relative-caret-position="-173" />
           </provider>
         </entry>
       </file>
@@ -235,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/10-18/模板.html" />
         <option value="$PROJECT_DIR$/10-18/返回顶部.html" />
         <option value="$PROJECT_DIR$/10-18/左侧菜单栏.html" />
         <option value="$PROJECT_DIR$/10-18/文本操作.html" />
@@ -286,6 +284,7 @@
         <option value="$PROJECT_DIR$/10-24/返回动态的网页内容.html" />
         <option value="$PROJECT_DIR$/10-24/返回动态的网页内容.py" />
         <option value="$PROJECT_DIR$/10-24/HomeWork.py" />
+        <option value="$PROJECT_DIR$/10-24/wsgiref版web开发.py" />
       </list>
     </option>
   </component>
@@ -340,11 +339,6 @@
             <path>
               <item name="temp" type="b2602c69:ProjectViewProjectNode" />
               <item name="temp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="temp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="10-22" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="temp" type="b2602c69:ProjectViewProjectNode" />
@@ -474,7 +468,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10-24/HomeWork.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10-24/wsgiref版web开发.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -545,14 +539,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="958" height="1030" extended-state="0" />
+    <frame x="1" y="0" width="958" height="1030" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.35197368" />
+      <window_info content_ui="combo" id="Project" order="2" weight="0.35197368" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2324511" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2324511" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39700806" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -611,13 +606,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/10-19/counter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/10-22/bootstrap-3.3.7/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -933,17 +921,6 @@
     <entry file="file://$PROJECT_DIR$/10-24/bootstrap-3.3.7/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/10-24/HomeWork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1540387483860" expanded="true" signature="552:620" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/10-24/返回动态的网页内容.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -964,9 +941,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/10-24/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89" />
+        <state relative-caret-position="-173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-24/wsgiref版web开发.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
