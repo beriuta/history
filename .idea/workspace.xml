@@ -2,10 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f75f9a20-1858-44e9-97f3-88e04559e521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/holder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/ie-emulation-modes-warning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/ie10-viewport-bug-workaround.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/ie10-viewport-bug-workaround.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myproject/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teste/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teste/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-24/wsgiref版web开发.py" beforeDir="false" afterPath="$PROJECT_DIR$/10-24/wsgiref版web开发.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10_23/导航条.html" beforeDir="false" afterPath="$PROJECT_DIR$/10_23/导航条.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/static/Dashboard Template for Bootstrap_files/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/bootstrap-3.3.7/js/npm.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/bootstrap-3.3.7/js/npm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/static/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/static/jquery.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,10 +153,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="30" />
-          <entry key="html" value="137" />
+          <entry key="css" value="31" />
+          <entry key="html" value="144" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="15" />
+          <entry key="js" value="16" />
           <entry key="md" value="1" />
           <entry key="py" value="44" />
           <entry key="sql" value="1" />
@@ -140,10 +166,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="30" />
-          <entry key="HTML" value="137" />
+          <entry key="CSS" value="31" />
+          <entry key="HTML" value="144" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="15" />
+          <entry key="JavaScript" value="16" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="44" />
@@ -155,7 +181,7 @@
         <counts>
           <entry key="css" value="2631" />
           <entry key="dummy" value="46" />
-          <entry key="html" value="35719" />
+          <entry key="html" value="36527" />
           <entry key="js" value="60" />
           <entry key="py" value="13723" />
           <entry key="text" value="69" />
@@ -165,7 +191,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2631" />
-          <entry key="HTML" value="35719" />
+          <entry key="HTML" value="36527" />
           <entry key="JavaScript" value="60" />
           <entry key="PLAIN_TEXT" value="121" />
           <entry key="Python" value="13723" />
@@ -192,8 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/10-18/左侧菜单栏.html" />
-        <option value="$PROJECT_DIR$/10-18/文本操作.html" />
         <option value="$PROJECT_DIR$/10-18/练习.html" />
         <option value="$PROJECT_DIR$/10-18/登录操作.html" />
         <option value="$PROJECT_DIR$/10-18/全选反选.html" />
@@ -226,7 +250,6 @@
         <option value="$PROJECT_DIR$/10_23/iframe标签.html" />
         <option value="$PROJECT_DIR$/10_23/模态框.html" />
         <option value="$PROJECT_DIR$/10_23/轮播图.html" />
-        <option value="$PROJECT_DIR$/10_23/导航条.html" />
         <option value="$PROJECT_DIR$/10_23/mystyle.css" />
         <option value="$PROJECT_DIR$/10_23/server端.py" />
         <option value="$PROJECT_DIR$/10_23/Dashboard Template for Bootstrap.html" />
@@ -243,6 +266,9 @@
         <option value="$PROJECT_DIR$/10-24/HomeWork.py" />
         <option value="$PROJECT_DIR$/10-24/wsgiref版web开发.py" />
         <option value="$PROJECT_DIR$/10-24/userinfo.html" />
+        <option value="$PROJECT_DIR$/10-25/起飞前的准备.html" />
+        <option value="$PROJECT_DIR$/10_23/导航条.html" />
+        <option value="$PROJECT_DIR$/10-25/导航条.html" />
       </list>
     </option>
   </component>
@@ -252,7 +278,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1" />
     <option name="width" value="958" />
     <option name="height" value="1030" />
@@ -301,12 +327,7 @@
             <path>
               <item name="temp" type="b2602c69:ProjectViewProjectNode" />
               <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="10-22" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="temp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="10_23" type="462c0819:PsiDirectoryNode" />
+              <item name="10-25" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,11 +347,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/10-25/imgg" />
+      <recent name="$PROJECT_DIR$/10-25" />
       <recent name="$PROJECT_DIR$/10-24" />
       <recent name="$PROJECT_DIR$/10_23" />
       <recent name="$PROJECT_DIR$/10-22" />
-      <recent name="$PROJECT_DIR$/10-19" />
-      <recent name="$PROJECT_DIR$/10-18" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/10_23" />
@@ -502,12 +523,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="958" height="1030" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.35197368" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.09978655" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2324511" />
@@ -569,37 +589,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/10-22/周末作业.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="155" column="36" selection-start-line="155" selection-start-column="36" selection-end-line="155" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10-22/jquery.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10-19/阻止后续事件的执行.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="19" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10-19/键盘被按下.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="21" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10-19/批量操作.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="108" column="9" lean-forward="true" selection-end-line="135" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/10-19/周末作业.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -716,23 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/10_23/列表组.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10_23/导航条.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/10_23/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -754,13 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="74" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10-22/周末作业自己写.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1721">
-          <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -791,16 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
           <caret line="47" column="6" lean-forward="true" selection-start-line="8" selection-end-line="47" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10_23/Dashboard Template for Bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="275" column="54" lean-forward="true" selection-start-line="275" selection-start-column="54" selection-end-line="275" selection-end-column="54" />
-          <folding>
-            <element signature="n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,6 +885,91 @@
     <entry file="file://$PROJECT_DIR$/10-24/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-22/周末作业自己写.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-25/bootstrap-3.3.7/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-25/起飞前的准备.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-25/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-13/Blog.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-25/起飞前的准备.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3500">
+          <caret line="184" column="32" selection-start-line="184" selection-start-column="32" selection-end-line="184" selection-end-column="32" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ol#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#a#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#a#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10_23/导航条.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10_23/Dashboard Template for Bootstrap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="266" column="37" selection-start-line="266" selection-start-column="37" selection-end-line="266" selection-end-column="37" />
+          <folding>
+            <element signature="n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10_23/列表组.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
       </provider>
     </entry>
   </component>
