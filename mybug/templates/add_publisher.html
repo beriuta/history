@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加出版社</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.css">
+</head>
+<body>
+<div class="container " style="padding-top: 200px">
+    <form action="/add_publisher/" method="post">
+        <div class="row">
+            <input type="text" class="form-control" name="name" placeholder="Email" value="请输入要增加的出版社名称"
+                   style="color: silver;" id="focus1">
+            {# 这里需要优化，input框里需要有‘填写出版社名的提示’，获取光标，点击框，框内的内容消失 #}
+        </div>
+        <div class="row" style="padding: 20px">
+            <div class="col-xs-12" style="text-align: center">
+                <input type="submit" value="添加">
+            </div>
+        </div>
+
+    </form>
+</div>
+
+</body>
+<script src="/static/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+<script>
+    window.onload = function () {
+        function $(id) {
+            return document.getElementById(id)
+        }
+
+        $("#focus1").onfocus = function fn() {
+            //          获取焦点用onfocus事件。下面，用if语句判断条件是否成立。
+            //          当用户没有在表单输入的时候，也就是表单里面是默认字的时候，
+            //          清空value值，然后改变字体颜色。
+            if ($("#focus1").value == "请输入要增加的出版社名称") {
+                //                    注意用“==”号，表示等于，单等号意思是赋值。
+                $("#focus1").value = "";
+                //                    清空表单默认字
+                {#$("#focus1").style.color = "#333";#}
+                //                    改变字体颜色
+            }
+        };
+        $("#focus1").onblur = function fn() {
+            //                失去焦点用“onblur”事件
+            if ($("#focus1").value == "") {
+                $("#focus1").value = "请输入要增加的出版社名称";
+                //                    恢复默认字
+                {#$("#focus1").style.color = "#ccc";#}
+                //                    恢复字体颜色
+            }
+        }
+    }
+</script>
+</html>

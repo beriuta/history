@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看出版社</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+{#    页头#}
+        <div class="page-header">
+            <h1>出版社名称表
+                <small>请按需求操作</small>
+            </h1>
+        </div>
+    </div>
+{#具体表格#}
+    <div class="row">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">表格操作</div>
+
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>出版社名</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for publisher in select_publisher %}
+                    <tr>
+                        <td>{{ publisher.id }}</td>
+                        <td>{{ publisher.p_name }}</td>
+                        <td>
+                            <a href="/delete_publisher/?id={{ publisher.id }}">删除</a>
+                            <a href="/alter_publisher/?id={{ publisher.id }}">修改</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <a href="/add_publisher/">增加出版社</a>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/static/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+</body>
+</html>

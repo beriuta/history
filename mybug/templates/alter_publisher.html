@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改出版社表</title>
+</head>
+<body>
+<div class="container " style="padding-top: 200px">
+    <div class="row">
+
+        <form action="/alter_publisher/" method="post">
+            <input type="text" class="form-control" name="id" placeholder="Email" value="{{ obj.id }}"
+                   style="display: none;">
+            <input type="text" class="form-control" name="name" placeholder="Email" value="{{ obj.p_name }}">
+            <div  style="padding: 20px">
+                <div class="col-xs-12" style="text-align: center">
+                    <input type="submit" value="提交">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script src="/static/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+</html>
