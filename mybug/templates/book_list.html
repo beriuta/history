@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="get">
+    <table border="1">
+
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>书名</th>
+            <th>出版社名</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in book_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+{#                <td>{{ book.id }}</td>#}
+                <td>{{ book.titile }}</td>
+                <td>{{ book.publisher.p_name }}</td>
+                <td>
+                    <a href="">编辑</a>
+                    <a href="/delete_book/?id={{ book.id }}">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</form>
+
+</body>
+</html>

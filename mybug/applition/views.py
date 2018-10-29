@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect,HttpResponse
-from applition.models import Info, Pulisher
+from django.shortcuts import render, redirect, HttpResponse
+from applition.models import Info, Pulisher, Book
 
 
 # Create your views here.
@@ -74,5 +74,16 @@ def alter_publisher(request):
     ret = Pulisher.objects.get(id=ret_id)
     # print(ret,type(ret))  #  是一个Publisher对象
     # 跳转页面，在input框里放入已有的内容
-    return render(request, 'alter_publisher.html', {'obj': ret})  # 错误，跳转到alter_publisher页面了但是input框里没有数据库内的内容,因为alter_publisher里面的obj.p_name写成了obj.name
+    return render(request, 'alter_publisher.html',
+                  {'obj': ret})  # 错误，跳转到alter_publisher页面了但是input框里没有数据库内的内容,因为alter_publisher里面的obj.p_name写成了obj.name
     # return HttpResponse('要编辑了')  # 一直卡了很久是因为这边获取的是‘id’，而select里面的编辑按钮上面的?id={{ publisher.name }}是获取的name
+
+
+def book_list(request):
+    data = Book.objects.all()
+    return render(request, 'book_list.html', {'book_list': data})
+
+def delete_book(request):
+    ret = request.GET.get('id')
+    Book.objects.filter(id=ret).delete()
+    return redirect('/book_list/')

@@ -1,4 +1,4 @@
-"""mybug URL Configuration
+"""datas URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -14,15 +14,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.contrib import admin
-from applition import views
+from applstion import views
 
 urlpatterns = [
-    url(r'^login/', views.login),
-    url(r'^select_publisher/', views.select_publisher),
-    url(r'^add_publisher/', views.add_publisher),
-    url(r'^delete_publisher/', views.delete_publisher),
-    url(r'^alter_publisher/', views.alter_publisher),
-    url(r'^book_list/',views.book_list),
-    url(r'^delete_book/', views.delete_book)
+    # 登录的URL
+    url(r'^login/$',views.login),
+    # 出版社增删改查的URL
+    url(r'^publisher_list/$',views.publisher_list),
+    url(r'^add_publisher/$',views.add_publisher),
+    url(r'^delete_publisher/$',views.delete_publisher),
+    url(r'^edit_publisher/$',views.edit_publisher),
+    url(r'^edit_publisher/$',views.edit_publisher),
+    # 书籍表格关联出版社的增删改查
+    url(r'^add_book/$',views.add_book),
+    url(r'^delete_book/$',views.delete_book),
+    url(r'^edit_book/$',views.edit_book),
+    url(r'^select_book/$',views.select_book),
 ]

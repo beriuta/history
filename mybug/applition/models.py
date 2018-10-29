@@ -14,3 +14,7 @@ class Pulisher(models.Model):
     p_name = models.CharField(max_length=20)
 
 
+class Book(models.Model):
+    id = models.AutoField(primary_key=True)
+    titile = models.CharField(max_length=20)
+    publisher = models.ForeignKey(to='Pulisher')  # 出版社名字映射，要加引号
