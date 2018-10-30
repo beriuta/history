@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看出版社表格</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>图书管理系统
+            <small>具体操作表格</small>
+        </h1>
+    </div>
+    {#    作者表格#}
+
+    <div class="row">
+        <div class="panel panel-info">
+            <div class="panel-heading" style="text-align: center;font-size: 25px">表格内容</div>
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">
+                        {#                        <a class="btn btn-success" href="/add_publisher/" style="color: white">增加</a>#}
+                        <button class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal">添加
+                        </button>
+                    </div>
+
+                    {#显示作者跟书籍名表格#}
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>id</th>
+                            <th>作者</th>
+                            <th>年龄</th>
+                            <th>作品</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for author in author_list %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ author.id }}</td>
+                                <td>{{ author.a_name }}</td>
+                                <td>{{ author.age }}</td>
+                                <td sj="{{ author. }}">
+                                    {% for book in author.book.all %}
+                                        {% if forloop.last %}
+                                            《{{ book.b_name }}》
+                                        {% else %}
+                                            《{{ book.b_name }}》,
+                                        {% endif %}
+                                    {% empty %}
+                                        暂无作品
+                                    {% endfor %}
+                                </td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning edit-book">模态框</button>
+                                    <a class="btn btn-danger" href="/delete_author/?id={{ author.id }}"
+                                       style="color: white">删除</a>
+                                    <a class="btn btn-primary edit_author" href="/edit_author/?id={{ author.id }}"
+                                       style="color: white">修改</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{#添加模态框#}
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">添加表格</h4>
+            </div>
+            <div class="modal-body">
+                <form action="/add_author/" method="post" id="modal_form">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">添加作者名称</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入作者名称"
+                               name="a_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">添加作者年龄</label>
+                        <input type="number" class="form-control" id="exampleInputEmail1" placeholder="请输入作者年龄"
+                               name="a_age">
+                    </div>
+                    <div class="form-group">
+                        <label for="book">选择书籍名称</label>  <!--一个作者可以有很多本书籍-->
+                        <select class="form-control" name="book" id="book" multiple>
+                            {% for book in book_list %}
+                                <option value="{{ book.id }}">{{ book.b_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="add_author">添加</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{#修改的模态框#}
+{#<div class="modal fade" tabindex="-1" role="dialog" id="myModal">#}
+{#    <div class="modal-dialog" role="document">#}
+{#        <div class="modal-content">#}
+{#            <div class="modal-header">#}
+{#                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>#}
+{#                </button>#}
+{#                <h4 class="modal-title">修改表格</h4>#}
+{#            </div>#}
+{#            <div class="modal-body">#}
+{#                <form action="/edit_author/" method="post">#}
+{#                    <div class="form-group">#}
+{#                        <label for="exampleInputEmail1">修改作者名称</label>#}
+{#                        <input type="text" class="form-control" name="author_name" value="{{ author.a_name }}"#}
+{#                               id="exampleInputEmail1" placeholder="请输入作者名称">#}
+{#                    </div>#}
+{#                    <div class="form-group">#}
+{#                        <label for="exampleInputEmail1">修改作者年龄</label>#}
+{#                        <input type="number" class="form-control" name="age" value="{{ author.age }}"#}
+{#                               id="exampleInputEmail1" placeholder="请输入作者年龄">#}
+{##}
+{#                    </div>#}
+{#                    <div class="form-group">#}
+{#                        <label for="book">选择书籍名称</label>  <!--一个作者可以有很多本书籍-->#}
+{#                        <select class="form-control" name="book" id="book" multiple>#}
+{#                            {% for book in book_list %}#}
+{#                                {% if book in author.book.all %}#}
+{#                                    <option selected value="{{ book.id }}">{{ book.b_name }}</option>#}
+{#                                    <!--selected只能获取<select>下拉列表中的全部处于选中状态的<option>选项元素，范围较小；而checke可以获取表单中处于选中状态的全部元素-->#}
+{#                                {% else %}#}
+{#                                    <option value="{{ book.id }}">{{ book.b_name }}</option>#}
+{#                                {% endif %}#}
+{#                            {% endfor %}#}
+{#                        </select>#}
+{#                    </div>#}
+{##}
+{#                </form>#}
+{#            </div>#}
+{#            <div class="modal-footer">#}
+{#                <button type="button" class="btn btn-primary" id="add_submit">修改</button>#}
+{#                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>#}
+{#            </div>#}
+{#        </div><!-- /.modal-content -->#}
+{#    </div><!-- /.modal-dialog -->#}
+{#</div><!-- /.modal -->#}
+<script src="/static/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+<script>
+    $('table').on('click', '.edit-book', function () {
+        {#弹出模态框#}
+        $('#myModal').modal('show');
+        {#把当前行的信息在模态框展示出来#}
+        var authorname = $(this).parent.prev().prev().prev().text();
+        {#取出版社#}
+
+    });
+    //给add_author按钮绑定点击事件，提交form表单
+    $('#add_author').click(function () {
+        $('#modal_form').submit();
+    })
+</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from applstion.models import UserInfo, Publisher, Book
+from applstion.models import UserInfo, Publisher, Book, Author
 
 
 # Create your views here.
@@ -55,6 +55,13 @@ def edit_publisher(request):
     return render(request, 'edit_publisher.html', {'obj': data})
 
 
+# 查看书籍名跟出版社名
+def select_book(request):
+    all_book = Book.objects.all()
+    all_publisher = Publisher.objects.all()
+    return render(request, 'select_book.html', {'book_list': all_book, 'publisher_list': all_publisher})  #
+
+
 # # 增加书名跟出版社名,无模态框
 # def add_book(request):
 #     if request.method == 'POST':
@@ -69,9 +76,9 @@ def edit_publisher(request):
 def add_book(request):
     b_name = request.POST.get('b_name')
     publisher_id = request.POST.get('publisher')
-    # Book.objects.create(b_name=b_name, publisher_id=publisher_id)
-    Book.objects.create(b_name=b_name, publisher=Publisher.objects.get(id=publisher_id))
-    return request('/select_book/')  # 循环出版社名称时一直显示不出来
+    Book.objects.create(b_name=b_name, publisher_id=publisher_id)
+    # Book.objects.create(b_name=b_name, publisher=Publisher.objects.get(id=publisher_id))
+    return redirect('/select_book/')  # 循环出版社名称时一直显示不出来
 
 
 # 删除书名和出版社，结果全部删除了
@@ -97,11 +104,64 @@ def edit_book(request):
         return redirect('/select_book/')  # 这个跳转不成功
     # 拿到所有的出版社数据，用来展示页面上的select标签
     all_publisher = Publisher.objects.all()
-    return render(request,'edit_book.html',{'book':b_obj,'publisher_list':all_publisher})
+    return render(request, 'edit_book.html', {'book': b_obj, 'publisher_list': all_publisher})
 
 
-# 查看书籍名跟出版社名
-def select_book(request):
-    all_book = Book.objects.all()
-    all_publisher = Publisher.objects.all()
-    return render(request, 'select_book.html', {'book_list': all_book, 'publisher': all_publisher})
+# 查看作者表格
+def author_list(request):
+    data = Author.objects.all()
+    book_all = Book.objects.all()
+    return render(request, 'author_list.html', {'author_list': data,'book_list':book_all})
+
+
+# 修改作者表格，书名
+def edit_author(request):
+    # pass
+    # 从数据库中提取到作者信息
+    a_id = request.GET.get('id')
+    author_obj = Author.objects.get(id=a_id)  # 获取一个作者对象all是获取的一个所有的作者的对象的列表
+
+    # 判断是否是post
+    if request.method == 'POST':
+        new_a_name = request.POST.get('author_name')
+        new_a_age = request.POST.get('age')
+        new_book_id = request.POST.getlist('book')  # 获取的是一个列表，并且里面全部是id
+
+        # 把新的数据替换到数据库中
+        author_obj.a_name = new_a_name
+        author_obj.age = new_a_age
+        author_obj.save()
+
+        # 把书籍名称更新到第三章表格中,之所以author_obj能调用book是因为它本身在Python中是属于Author类中的，并不涉及到数据库层面
+        author_obj.book.set(new_book_id)  # set设置：在列表找寻，如果原来有，就留着，如果原来没有就加上
+        # 把作者关联的书籍id设置成指定的值
+        return redirect('/author_list/')
+    # 把所提取的信息放在input框中
+    book_all = Book.objects.all()
+    return render(request, 'edit_author.html', {'author':author_obj,'book_list':book_all})
+
+
+# 删除作者表格，书名
+def delete_author(request):
+    a_delete = request.GET.get('id')
+    Author.objects.filter(id=a_delete).delete()
+    return redirect('/author_list/')
+
+
+# 增加作者，书名
+def add_author(request):
+    if request.method == 'POST':
+        # 获取作者名跟书的id
+        data = request.POST.get('a_name')
+        a_age = request.POST.get('a_age')
+        book_id = request.POST.getlist('book')  # 一个列表
+        # 创建一个新的作者
+        author_obj = Author.objects.create(a_name=data,age=a_age)
+        # 创建第三张表格中的书籍
+        book_obj = author_obj.book.add(*book_id)  # 因为book_id里面可能会有很多个id值，所以打散传入，*是打散
+        return redirect('/author_list/')
+    boos = Book.objects.all()
+    return render(request,'author_list.html',{'book_list':boos})
+
+
+

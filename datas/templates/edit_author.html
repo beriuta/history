@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改作者表格</title>
+</head>
+<body>
+<form action="/edit_author/?id={{ author.id }}" method="post">
+    <input type="text" name="author_name" value="{{ author.a_name }}">
+    <input type="number" name="age" value="{{ author.age }}">
+
+    <select name="book" id="book" multiple>  <!--允许在下拉列表中进行多选-->
+        {% for book in book_list %}
+            {% if book in author.book.all %}
+                <option selected value="{{ book.id }}">{{ book.b_name }}</option>
+                <!--selected只能获取<select>下拉列表中的全部处于选中状态的<option>选项元素，范围较小；而checke可以获取表单中处于选中状态的全部元素-->
+            {% else %}
+                <option value="{{ book.id }}">{{ book.b_name }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <input type="submit">
+</form>
+</body>
+</html>

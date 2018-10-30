@@ -7,6 +7,8 @@ class UserInfo(models.Model):
     id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
+
+
 # 导入数据库的时候发生了一个错误  ImportError: cannot import name 'Publisher',是因为我提前在models.py中导入了没有创建好的数据库名称
 
 
@@ -21,3 +23,11 @@ class Book(models.Model):
     id = models.AutoField(primary_key=True)
     b_name = models.CharField(max_length=20)
     publisher = models.ForeignKey(to='Publisher')
+
+
+# 创建作者表格
+class Author(models.Model):
+    id = models.AutoField(primary_key=True)
+    a_name = models.CharField(max_length=20)
+    age = models.IntegerField()
+    book = models.ManyToManyField(to='Book')

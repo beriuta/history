@@ -76,7 +76,7 @@
                     <div class="form-group">
                         <label for="publisher">选择出版社名称</label>
 {#                        <input type="text" class="form-control" id="publisher" placeholder="请选择出版社" name="publisher">#}
-                        <select class="form-control" name="publisher" id="">
+                        <select class="form-control" name="publisher" id="publisher">
                             {% for publisher in publisher_list %}
                                 <option value="{{ publisher.id }}">{{ publisher.p_name }}</option>
                             {% endfor %}
