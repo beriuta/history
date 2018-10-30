@@ -55,21 +55,53 @@ def edit_publisher(request):
     return render(request, 'edit_publisher.html', {'obj': data})
 
 
-# 增加书名跟出版社名
+# # 增加书名跟出版社名,无模态框
+# def add_book(request):
+#     if request.method == 'POST':
+#         book_name = request.POST.get('b_name')
+#         publisher_id = request.POST.get('id')
+#         data = Book.objects.create(b_name=book_name, publisher_id=publisher_id)
+#         return redirect('/select_book/')
+#     return render(request, 'add_book.html')
+
+
+# 增加书名跟出版社名,点击出现模态框
 def add_book(request):
-    pass
+    b_name = request.POST.get('b_name')
+    publisher_id = request.POST.get('publisher')
+    # Book.objects.create(b_name=b_name, publisher_id=publisher_id)
+    Book.objects.create(b_name=b_name, publisher=Publisher.objects.get(id=publisher_id))
+    return request('/select_book/')  # 循环出版社名称时一直显示不出来
 
 
-# 删除书名
+# 删除书名和出版社，结果全部删除了
 def delete_book(request):
-    pass
+    delete_id = request.GET.get('id')
+    Book.objects.filter(id=delete_id).delete()  # 这边用了get
+    return redirect('/select_book/')
 
 
 # 修改书名跟出版社名
 def edit_book(request):
-    pass
+    # 先获取要编辑的书籍的id
+    b_id = request.GET.get('id')
+    # 在获取要编辑的书籍的对象
+    b_obj = Book.objects.get(id=b_id)
+    # 判断是否是POST
+    if request.method == 'POST':
+        new_b_name = request.POST.get('b_name')
+        new_p_id = request.POST.get('publisher')
+        b_obj.b_name = new_b_name
+        b_obj.publisher_id = new_p_id
+        b_obj.save()
+        return redirect('/select_book/')  # 这个跳转不成功
+    # 拿到所有的出版社数据，用来展示页面上的select标签
+    all_publisher = Publisher.objects.all()
+    return render(request,'edit_book.html',{'book':b_obj,'publisher_list':all_publisher})
 
 
 # 查看书籍名跟出版社名
 def select_book(request):
-    pass
+    all_book = Book.objects.all()
+    all_publisher = Publisher.objects.all()
+    return render(request, 'select_book.html', {'book_list': all_book, 'publisher': all_publisher})

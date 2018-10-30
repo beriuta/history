@@ -21,10 +21,7 @@
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
                     <div class="panel-heading">
-                        <button type="button" class="btn btn-success" style="color: white">
-                             <a href="/add_publisher/">增加</a>
-                        </button>
-
+                        <a class="btn btn-success" href="/add_publisher/" style="color: white">增加</a>
                     </div>
 
                     {#显示出版社表格#}
@@ -44,13 +41,8 @@
                                 <td>{{ publisher.id }}</td>
                                 <td>{{ publisher.p_name }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-link">
-                                        <a href="/delete_publisher/?id={{ publisher.id }}">删除</a>
-                                    </button>
-
-                                    <button type="button" class="btn btn-default">
-                                        <a href="/edit_publisher/?id={{ publisher.id }}">修改</a>
-                                    </button>
+                                    <a class="btn btn-danger" href="/delete_publisher/?id={{ publisher.id }}" style="color: white">删除</a>
+                                    <a class="btn btn-primary" href="/edit_publisher/?id={{ publisher.id }}" style="color: white">修改</a>
                                 </td>
                             </tr>
                         {% endfor %}

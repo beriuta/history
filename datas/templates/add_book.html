@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加书籍名和出版社名</title>
+</head>
+<body>
+<form action="">
+    <input type="text" name="b_name" placeholder="请输入书籍名称">
+    <select name="id" id="">
+        {% for publisher in publisher_list %}
+            <option value="{{ publisher.id }}">{{ publisher.p_name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit">
+</form>
+</body>
+</html>

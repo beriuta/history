@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改表格内容</title>
+</head>
+<body>
+<form action="" method="post">
+    <input type="text" value="{{ book.b_name }}" name="b_name">
+        <select name="publisher" >
+            {% for publisher in publisher_list %}
+                {% if publisher == book.publisher %}
+                <option selected value="{{ publisher.id }}">{{ publisher.p_name }}</option>
+                {% else %}
+                <option value="{{ publisher.id }}">{{ publisher.p_name }}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+        <button type="button" class="btn btn-success">提交 </button>
+</form>
+</body>
+</html>

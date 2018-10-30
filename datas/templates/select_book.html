@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看出版社表格</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>图书管理系统
+            <small>具体操作表格</small>
+        </h1>
+    </div>
+    {#增加出版社名称#}
+
+    <div class="row">
+        <div class="panel panel-info">
+            <div class="panel-heading" style="text-align: center;font-size: 25px">表格内容</div>
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">
+{#                        <a class="btn btn-success" href="/add_publisher/" style="color: white">增加</a>#}
+                        <button  class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal">添加</button>
+                    </div>
+
+                    {#显示出版社跟书籍名表格#}
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>id</th>
+                            <th>书籍名称</th>
+                            <th>出版社名称</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for book in book_list %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ book.id }}</td>
+                                <td>{{ book.b_name }}</td>
+                                <td>{{ book.publisher.p_name }}</td>
+                                <td class="text-center">
+                                    <a class="btn btn-danger" href="/delete_book/?id={{ book.id }}"
+                                       style="color: white">删除</a>
+                                    <a class="btn btn-primary" href="/edit_book/?id={{ book.id }}"
+                                       style="color: white">修改</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{#模态框#}
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">添加书籍</h4>
+            </div>
+            <div class="modal-body">
+                <form action="/add_book/" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">添加书籍名称</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入书籍名称" name="b_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="publisher">选择出版社名称</label>
+{#                        <input type="text" class="form-control" id="publisher" placeholder="请选择出版社" name="publisher">#}
+                        <select class="form-control" name="publisher" id="">
+                            {% for publisher in publisher_list %}
+                                <option value="{{ publisher.id }}">{{ publisher.p_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">添加</button>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/static/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+</body>
+</html>
