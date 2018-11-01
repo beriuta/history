@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>{{ name }}</p>
+{#    字典按key取值#}
+    <p>{{ d1.name }}</p>
+    <p>{{ d1.age }}</p>
+    <p>{{ d1.hobby }}</p>
+{#    如果属性或key跟方法重名，优先显示属性或key#}
+    <p>{{ d1.items }}</p>
+    <hr>
+    <p>{{ f5.name }}</p>
+    <p>{{ f5.age }}</p>
+    <p>{{ f5.dream }}</p>
+    <hr>
+    <p>{{ list.1.name }}</p>
+    <p>{{ list.1.age }}</p>
+    <p>{{ list.0.name }}</p>
+    <p>{{ list.2.name }}</p>
+    <hr>
+    <p>{{ list2.2 }}</p>
+    <p>{{ list2.3 }}</p>
+    <p>{{ list2.5 }}</p>
+    <p>{{ list2.6 }}</p>
+</body>
+</html>
