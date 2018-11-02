@@ -40,4 +40,14 @@ def delete_publisher(request):
 
 # 编辑修改出版社
 def edit_publisher(request):
-    pass
+    if request.method == 'POST':
+        new_name = request.POST.get('name')
+        print(new_name)
+        new_id = request.POST.get('id')
+        data = Publisher.objects.create(id=new_id)
+        data.p_name = new_name
+        data.save()
+        return redirect('/publisher_list/')
+    a = request.GET.get('id')
+    data = Publisher.objects.get(id=a)
+    return render(request, 'edit_publisher.html', {'obj': data})

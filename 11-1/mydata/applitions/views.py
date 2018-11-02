@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from datetime import datetime,timedelta
 
 # Create your views here.
 def t(request):
@@ -57,4 +57,24 @@ def s(request):
 def m(request):
     name = 'Beriuta'
     file_size = 10000
-    return render(request, 'm.html', {'name': name})
+    a = '<a href="https://www.baidu.com">百度</a>'
+    p = '在苍茫的大海上，狂风卷积着乌云，在乌云和大海之间，海燕像黑色的闪电，在高傲地飞翔！'
+    p_1 = '在 苍 茫 的 大 海 上，狂风卷积着乌云，在乌云和大海之间，海燕像黑色的闪电，在高傲地飞翔！'
+    p_2 = 'aaabsbshsasjahahaayaha'
+    now = datetime.now()  # 获取一个datetime类型的时间
+    list1 = ['huhu','hehe','didi','shil','sb']
+    # 获取五个小时之前的时间
+    hours = now - timedelta(hours=4)
+    return render(request, 'm.html',
+                  {'name': name,
+                   'file_size':file_size,
+                   'now':now,
+                   'a':a,
+                   'p':p,
+                   'p_1':p_1,
+                   'p_2':p_2,
+                   'list1':list1,
+                   'hours':hours
+
+                   }
+                  )

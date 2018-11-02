@@ -5,6 +5,42 @@
     <title>filter相关的语法</title>
 </head>
 <body>
+    {% load test %}
     <p>{{ name|symbol }}</p>
+    <p>{{ file_size|filesizeformat }}</p>
+    <p>{{ age }}</p>  <!--定义一个views中没有的一个变量-->
+    <p>{{ age|default:'保密'}}</p>  <!--age显示‘保密’-->
+    <hr>
+    <p>length</p>
+    <p>{{ name|length }}</p>  <!--7-->
+    <hr>
+    <p>slice</p>
+    <p>{{ name|slice:'1:' }}</p>  <!--eriuta-->
+    <hr>
+    <p>date</p>
+    <p>{{ now }}</p>  <!--Nov. 1, 2018, 11:45 a.m.-->
+    <p>{{ now|date:'Y-m-d H:i:s' }}</p>  <!--2018-11-01 11:45:53-->
+    <hr>
+    <p>模板语言中默认会把标签都转义</p>
+    {{ a }}
+    {{ a|safe }}
+    <hr>
+    <p>{{ p }}</p>
+    <p>{{ p|truncatechars:'10' }}</p>
+    <p>truncatewords是按照空格区分不同的字</p>
+    <p>{{ p_1|truncatewords:'5' }}</p>
+    <hr>
+    <p>cut</p>
+    <p>{{ p_2|cut:'a' }}</p>
+    <hr>
+    <p>{{ list1|join:'*' }}</p>
+    <p>{{ hours|timesince }}之前</p>
+    <hr>
+    <p>for循环</p>
+    <ul>
+        {% for b in list1 %}
+            <li>{{ forloop.revcounter0 }}-{{ b }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
