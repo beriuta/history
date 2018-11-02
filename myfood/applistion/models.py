@@ -19,6 +19,7 @@ class Publisher(models.Model):
 class Book(models.Model):
     id = models.AutoField(primary_key=True)
     b_name = models.CharField(max_length=20)
+    publisher = models.ForeignKey(to='Publisher')
 
 
 # 作者表格

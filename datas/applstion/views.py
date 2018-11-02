@@ -44,7 +44,7 @@ def edit_publisher(request):
         # 如果是，获取用户输入的内容
         new_name = request.POST.get('name')
         new_id = request.POST.get('id')
-        data = Publisher.objects.create(id=new_id)
+        data = Publisher.objects.get(id=new_id)
         data.p_name = new_name
         data.save()  # 更新到数据库中
         return redirect('/publisher_list/')

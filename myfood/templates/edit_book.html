@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改书籍</title>
+</head>
+<body>
+<form action="" method="post">
+        <input type="text" name="{{ book.id }}" style="display: none">
+        <input type="text" name="book" value="{{ book.b_name }}">
+
+        <select name="p_id" id="">
+            {% for publisher in publisher_list %}
+                {% if publisher == book.publisher %}
+                    <option selected value="{{ publisher.id }}">{{ publisher.p_name }}</option>
+                {% else %}
+                    <option value="{{ publisher.id }}">{{ publisher.p_name }}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+    <input type="submit">
+</form>
+</body>
+</html>

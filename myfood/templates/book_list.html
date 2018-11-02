@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书籍表</title>
+</head>
+<body>
+<form action="" method="post">
+    <a href="/add_book/">增加</a>
+<table border="1">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>id</th>
+        <th>书籍名</th>
+        <th>出版社名</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in book_list %}
+    <!--这个一定要写在tr上面-->
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ book.id }}</td>
+        <td>{{ book.b_name }}</td>
+        <td>{{ book.publisher.p_name }}</td>
+        <td>
+            <a href="/edit_book/" >修改</a>
+            <a href="/delete_book/?id={{ book.id }}">删除</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</form>
+</body>
+</html>

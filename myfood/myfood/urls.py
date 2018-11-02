@@ -23,5 +23,15 @@ urlpatterns = [
     url(r'^publisher_list/$', views.publisher_list),
     url(r'^add_publisher/$', views.add_publisher),
     url(r'^delete_publisher/$', views.delete_publisher),
-    url(r'^edit_publisher/$',views.edit_publisher)
+    url(r'^edit_publisher/$',views.edit_publisher),
+    #书籍
+    url(r'^book_list/$',views.book_list),
+    url(r'^delete_book/$',views.delete_book),
+    url(r'^add_book/$',views.add_book),
+    url(r'^edit_book/$',views.edit_book),
+    #作者
+    url(r'^author_list/$',views.author_list),
+    url(r'^delete_author/$',views.delete_author),
+    url(r'^add_author/$',views.add_author),
+    url(r'^edit_author/$',views.edit_author)
 ]
