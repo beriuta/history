@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看老师</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.css">
+    <style>
+        body {
+            padding-bottom: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="" style="background-color: darkcyan">
+    <div class="container">
+        <div class="container-fluid" id="d1">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: white">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    {#                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>#}
+                    <a class="navbar-brand" href="#" style="color: white">Brand</a>
+                    <a class="navbar-brand" href="#" style="color: white">Brand</a>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="navbar-brand" href="#" style="color: white">Brand</a>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
+
+
+{#左侧栏#}
+
+<div class="list-group col-sm-2" style="text-align: center">
+    <a type="button" class="list-group-item" href="/class_list/">班级表格</a>
+    <a type="button" class="list-group-item" href="/student_list/">学生表格</a>
+    <a type="button" class="list-group-item" href="/teacher_list/">老师表格</a>
+
+</div>
+
+
+{#页头#}
+<div class="container">
+    <div class="page-header">
+        <h1>Class management system
+            <small>Table operation</small>
+        </h1>
+    </div>
+    {#    表格#}
+    <div class="row">
+        <div class="panel panel-info">
+            <div class="panel-heading" style="text-align: center;font-size: 25px">表格操作</div>
+            <div class="panel-body">
+                <a href="/add_teacher/">增加</a>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>id</th>
+                        <th>老师名</th>
+                        <th>带领班级名</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for teacher in teacher_list %}
+                        <!--这个一定要写在tr上面-->
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ teacher.id }}</td>
+                            <td>{{ teacher.t_name }}</td>
+                            <td>
+                                {% for class in teacher.class_name.all %}
+                                    {% if forloop.last %}
+                                        {{ class.c_name }}
+                                    {% else %}
+                                        {{ class.c_name  }} 、
+                                    {% endif %}
+                                {% empty %}
+                                    暂无带领班级
+                                {% endfor %}
+
+                            </td>
+                            <td>
+                                <a href="/edit_teacher/?id={{ teacher.id }}">修改</a>
+                                <a href="/delete_teacher/?id={{ teacher.id }}">删除</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                {#                分页#}
+                <nav aria-label="Page navigation" style="float: right">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/static/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+</body>
+</html>

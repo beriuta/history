@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改作者表</title>
+</head>
+<body>
+<form action="" method="post">
+    <input type="text" value="{{ author.a_name }}" name="name">
+    <input type="text" value="{{ author.a_age }}" name="age">
+    <select name="id" id="" multiple>
+        {% for book in book_list %}
+            {% if book in author.book.all %}
+                    <option selected value="{{ book.id }}">{{ book.b_name }}</option>
+                {% else %}
+                    <option value="{{ book.id }}">{{ book.b_name }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <input type="submit">
+</form>
+</body>
+</html>

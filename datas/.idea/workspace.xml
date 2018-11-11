@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40b24d7f-a027-4be0-8732-f44a75954657" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../11-2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/add_book.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/book_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/edit_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myfood/templates/add_author.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myfood/templates/author_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myfood/templates/edit_author.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applstion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/applstion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/.idea/dataSources/de928147-03a6-43b3-a6b5-95fca669ed69.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/.idea/dataSources/de928147-03a6-43b3-a6b5-95fca669ed69.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myfood/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/applistion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/applistion/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myfood/applistion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/applistion/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myfood/myfood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/myfood/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfood/templates/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/book_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfood/templates/edit_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/edit_book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfood/templates/publisher_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/publisher_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +73,7 @@
     <session id="1282945133">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -104,7 +104,7 @@
           <entry key="applstion_book" value="6" />
           <entry key="applstion_publisher" value="3" />
           <entry key="applstion_userinfo" value="2" />
-          <entry key="html" value="18" />
+          <entry key="html" value="20" />
           <entry key="js" value="1" />
           <entry key="py" value="5" />
           <entry key="sql" value="1" />
@@ -113,7 +113,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="13" />
-          <entry key="HTML" value="18" />
+          <entry key="HTML" value="20" />
           <entry key="JavaScript" value="1" />
           <entry key="Python" value="5" />
           <entry key="Scratch" value="1" />
@@ -123,11 +123,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applstion/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
+            <state relative-caret-position="105">
+              <caret line="135" column="66" lean-forward="true" selection-start-line="135" selection-start-column="58" selection-end-line="135" selection-end-column="66" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
                 <marker date="1541120135710" expanded="true" signature="163:168" ph="..." />
@@ -153,15 +153,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/add_book.html">
+        <entry file="file://$PROJECT_DIR$/templates/edit_author.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="92">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/edit_book.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
@@ -171,10 +171,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/publisher_list.html">
+        <entry file="file://$PROJECT_DIR$/templates/author_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="-578">
+              <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -229,9 +229,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="600" />
-    <option name="y" value="52" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1010" />
     <option name="height" value="1024" />
   </component>
@@ -380,10 +378,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="600" y="52" width="1010" height="1024" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13874066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -464,20 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edit_author.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/author_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datas/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -501,13 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/publisher_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_publisher.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -522,6 +498,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/publisher_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-253">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edit_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="59" lean-forward="true" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/author_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-578">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/select_book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -529,17 +533,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_book.html">
+    <entry file="file://$PROJECT_DIR$/templates/edit_author.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="92">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applstion/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
+        <state relative-caret-position="105">
+          <caret line="135" column="66" lean-forward="true" selection-start-line="135" selection-start-column="58" selection-end-line="135" selection-end-column="66" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
             <marker date="1541120135710" expanded="true" signature="163:168" ph="..." />
@@ -551,13 +555,6 @@
             <marker date="1541120135710" expanded="true" signature="3484:3489" ph="..." />
             <marker date="1541120135710" expanded="true" signature="3681:3686" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edit_book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="59" lean-forward="true" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
         </state>
       </provider>
     </entry>

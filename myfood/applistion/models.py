@@ -19,6 +19,7 @@ class Publisher(models.Model):
 class Book(models.Model):
     id = models.AutoField(primary_key=True)
     b_name = models.CharField(max_length=20)
+    pub_date = models.DateField(auto_now_add=True,null=True)
     publisher = models.ForeignKey(to='Publisher')
 
 

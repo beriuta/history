@@ -96,19 +96,62 @@ def edit_book(request):
 
 # 查看作者跟书籍，多表查询
 def author_list(request):
-    pass
+    author = Author.objects.all()
+    return render(request, 'author_list.html', {'author_list': author})
 
 
 # 删除作者跟书籍
 def delete_author(request):
-    pass
+    delete_id = request.GET.get('id')
+    Author.objects.get(id=delete_id).delete()
+    return redirect('/author_list/')
 
 
 # 添加作者跟书籍
 def add_author(request):
-    pass
+    if request.method == 'POST':
+        a_name = request.POST.get('name')
+        print(a_name)
+        a_age = request.POST.get('age')
+        b_id = request.POST.getlist('id')
+        a_obj = Author.objects.create(a_name=a_name, a_age=a_age)
+        a_obj.save()
+        a_obj.book.add(*b_id)
+        return redirect('/author_list/')
+    book_all = Book.objects.all()
+    return render(request, 'add_author.html', {'book_list': book_all})
 
 
 # 修改作者跟书籍
 def edit_author(request):
-    pass
+    # get获取id
+    # 根据id到数据库中获取到要修改的名字，年龄，书籍
+    # 显示到页面的input框中
+    # post获取修改的作者，名字，年龄，书籍
+    # 更新到数据库中
+    # 返回一个页面
+    a_id = request.GET.get('id')
+    ret = Author.objects.get(id=a_id)
+    if request.method == 'POST':
+        new_name = request.POST.get('name')
+        new_age = request.POST.get('age')
+        b_id = request.POST.getlist('id')
+        ret.a_name = new_name
+        ret.a_age = new_age
+        ret.save()
+        ret.book.set(b_id)
+        return redirect('/author_list/')
+    book = Book.objects.all()
+    return render(request, 'edit_author.html', {'author': ret, 'book_list': book})
+
+
+# 测试
+def c_book(request,year):
+    # 根据用户查询的url年份不同，返回不用的数据
+    print(year,type(year))  # 2018 <class 'str'>
+    return render(request,'book.html')
+
+
+def blog(request, num=1):
+    print(num)
+    return HttpResponse('播了页面')
