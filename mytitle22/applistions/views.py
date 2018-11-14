@@ -40,4 +40,5 @@ def login(request):
 
 @coklin_login
 def home(request):
+    print('zzzz')
     return HttpResponse('这是home页面')
