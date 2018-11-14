@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+
+<h1>上传文件</h1>
+<input type="file" id="f2">
+<button id="b1">上传</button>
+
+{% load static %}
+<script src="{% static 'jquery.js' %}"></script>
+<script>
+    $('#b1').click(function () {
+        // 渠道要上传的文件数据
+        var fdObj = new FormData();
+        {#console.log($('#f1')[0]);#}
+        {#console.log($('#f1')[0].files[0]);#}
+        fdObj.append('xx', $('#f2')[0].files[0]);
+        // 在请求的数据中添加csrftoken
+        var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
+        fdObj.append('csrfmiddlewaretoken',csrfToken);
+        // 发送Ajax请求
+        $.ajax({
+            url:'/upload/',
+            type:'post',
+            data:fdObj,
+            processData: false,  // 告诉Django不要处理我上传的数据
+            contentType: false,  //  告诉Django不要设置请求的文件类型
+            success:function (res) {
+                console.log(res)
+            }
+        })
+    })
+</script>
+</body>
+</html>

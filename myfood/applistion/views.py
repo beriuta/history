@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from applistion.models import UserInfo, Publisher, Book, Author
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -38,19 +39,33 @@ def delete_publisher(request):
     return redirect('/publisher_list/')
 
 
-# 编辑修改出版社
+# # 编辑修改出版社
+# def edit_publisher(request):
+#     if request.method == 'POST':
+#         new_name = request.POST.get('name')
+#         print(new_name)
+#         new_id = request.POST.get('id')
+#         data = Publisher.objects.get(id=new_id)  # 这边一个错误，get写成了create，create是更新
+#         data.p_name = new_name
+#         data.save()
+#         return redirect('/publisher_list/')
+#     a = request.GET.get('id')
+#     data = Publisher.objects.get(id=a)
+#     return render(request, 'edit_publisher.html', {'obj': data})
+
+
+# 编辑出版社模态框
 def edit_publisher(request):
     if request.method == 'POST':
-        new_name = request.POST.get('name')
+        pid = request.POST.get('id')
+        new_name = request.POST.get('new_name')
+        print(pid)
         print(new_name)
-        new_id = request.POST.get('id')
-        data = Publisher.objects.get(id=new_id)  # 这边一个错误，get写成了create，create是更新
-        data.p_name = new_name
-        data.save()
-        return redirect('/publisher_list/')
-    a = request.GET.get('id')
-    data = Publisher.objects.get(id=a)
-    return render(request, 'edit_publisher.html', {'obj': data})
+        Publisher.objects.filter(id=pid).update(p_name=new_name)
+        # 给用户展示编辑后的效果
+        res = {'code': 0, 'next_url': '/publisher_list/'}
+        return JsonResponse(res)
+
 
 
 # 查看书籍和出版社，联表查询
@@ -145,13 +160,3 @@ def edit_author(request):
     return render(request, 'edit_author.html', {'author': ret, 'book_list': book})
 
 
-# 测试
-def c_book(request,year):
-    # 根据用户查询的url年份不同，返回不用的数据
-    print(year,type(year))  # 2018 <class 'str'>
-    return render(request,'book.html')
-
-
-def blog(request, num=1):
-    print(num)
-    return HttpResponse('播了页面')

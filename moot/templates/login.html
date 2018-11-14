@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+<label for="">用户名
+    <input type="text" name="user" id="d1" >
+</label>
+<label for="">密码
+    <input type="password" name="pwd" id="d2">
+</label>
+<button value="登录" id="b1">登录</button>
+<span style="color: red;"></span>
+
+{% load static %}
+<script src="{% static 'jquery.js' %}"></script>
+<script>
+    $('#b1').click(function () {
+        //处理csrftoken问题
+        var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
+        // 发送Ajax请求
+        $.ajax({
+            url:'/login/',
+            type:'post',
+            data:{user:$('#d1').val(),pwd:$('#d2').val(),csrfmiddlewaretoken:csrfToken},
+            success:function (res) {
+                var data = res;
+                if(data.code === 0){
+                    // 登陆成功，跳转到指定的url
+                    location.href = data.next_url    // 跳转页面使用location.href
+                }else{
+                    $('#b1+span').text(data.msg_error)
+                }
+
+            }
+        })
+    })
+</script>
+</body>
+</html>

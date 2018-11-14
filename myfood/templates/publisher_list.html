@@ -91,8 +91,12 @@
                             <td>{{ publisher.id }}</td>
                             <td>{{ publisher.p_name }}</td>
                             <td>
-                                <a href="/delete_publisher/?id={{ publisher.id }}">删除</a>
-                                <a href="/edit_publisher/?id={{ publisher.id }}">编辑</a>
+                                <a type="button" class='btn btn-sm btn-danger' aria-label="Lefr Align" href="/delete_publisher/?id={{ publisher.id }}">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+                                </a>
+                                <button type="button" class="btn btn-success edit_btn" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>编辑
+                                </button>
                             </td>
                         </tr>
                     {% endfor %}
@@ -126,8 +130,72 @@
     </div>
 </div>
 
+<!--模态框-->
+<div class="modal fade" tabindex="-1" role="dialog" id="ml">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改出版社</h4>
+      </div>
+      <div class="modal-body">
+          <form>
+              <div class="form-group">
+                  <label for="publisher_name">出版社</label>
+                  <input type="text" class="form-control" id="publisher_name" placeholder="publisher-name">
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="save">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script src="/static/jquery.js"></script>
 <script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+<script>
+    // 找到页面上的所有的编辑按钮，绑定点击事件
+    $('table').on('click','.edit_btn',function () {
+         // 弹出模态框
+        // 拿出要编辑的出版社的id
+        var editId = $(this).parent().prev().prev().text();
+        var Pname = $(this).parent().prev().text();
+        // 其实可以直接把模态框里的id值.val(Pname)放进去，但是因为保存的时候需要往数据库提交，
+        // 这时候没有id值是不能提交的，所以，需要在input标签设置一个自定义属性，按照id值去添加
+        var $Input = $('#publisher_name');  // 一个对象
+        // 给模态框的input标签加一个自定义属性。Publisher_id
+        $Input.attr('publisher_id',editId);
+        $Input.val(Pname);
+        $('#ml').modal('show');
+    });
+    // 给模态框添加保存事件
+    $('#save').click(function () {
+        // 获取出版社的id值和新名称
+        var $Input = $('#publisher_name');
+        var Eid = $Input.attr('publisher_id');
+        var NewName = $Input.val();
+        // 发送ajax请求
+        $.ajax({
+            url:'/edit_publisher/',
+            type:'post',
+            data:{'id':Eid,'new_name':NewName},
+            success:function (res) {
+                // 成功之后跳转到下一个url
+                console.log(res);
+                if(res.code === 0){
+                    location.href = res.next_url
+
+                }
+            }
+        })
+    })
+
+
+
+
+</script>
 </body>
 </html>

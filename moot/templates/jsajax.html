@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1">
+<button>提交</button>
+
+{% load static %}
+<script src="{% static 'jquery.js' %}"></script>
+<script>
+    var ilEle = document.getElementById('#i1');
+    ilEle.onblur = function () {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open('POST','/index',true);
+        xmlHttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+        var num = ilEle.value;
+        xmlHttp.send('num'+num);
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200){
+                alert(xmlHttp.responseText)
+            }
+        };
+    };
+</script>
+</body>
+</html>

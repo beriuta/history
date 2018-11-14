@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'sweetalert/sweetalert.css' %}">
+    <style>
+        div.sweet-alert.showSweetAlert h2 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+{% csrf_token %}
+<div class="col-md-10 col-md-offset-2">
+
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>出版社名称</th>
+            <th>地址</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for publisher in publisher_list %}
+            <tr pid="{{ publisher.id }}">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ publisher.pname }}</td>
+                <td>{{ publisher.addr }}</td>
+                <td>
+                    <button class="btn btn-danger delete_btn">删除</button>
+                    <button class="btn btn-warning">编辑</button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script src="{% static 'jquery.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7/js/bootstrap.js' %}"></script>
+<script src="{% static 'sweetalert/sweetalert.js' %}"></script>
+
+<script>
+    // 绑定删除点击事件
+    $('.delete_btn').click(function () {
+        var deletid = $(this).parent().parent().attr('pid');
+        swal({
+                title: "确定删除吗？",
+                text: "你将无法恢复该虚拟文件！",
+                type: "warning",   // success/info/warning/error
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "确定删除！",
+                closeOnConfirm: false
+            },
+            function () {
+                // 点击之后弹出模态框
+                // 获取到id值
+                $.ajax({
+                    url:'/delete_publisher/',
+                    type:'post',
+                    data:{id:deletid,csrfmiddlewaretoken: $('[name="csrfmiddlewaretoken"]').val()},
+                    success:function (res) {
+                        if(res['code'] === 0){
+                            // 在页面上删除当前行
+                            var $delete_id = $('[pid='+deletid+']');
+
+                            // 找到当前行后面的所有的tr,但是不止一个
+                            var d_id = $delete_id.nextAll('tr');
+                            // 每个tr的第一个td-1,eq是等于的意思，英语equal，简写eq,获取值等于第(0)个元素
+                            d_id.each(function () {
+                                var num = $(this).children().eq(0).text()-1;
+                                $(this).children().eq(0).text(num)
+                            });
+                            // 删除当前行
+                            $delete_id.remove()
+                        }
+                    }
+                });
+                // 弹框提示
+                swal("删除！", "你的虚拟文件已经被删除。", "success");
+            });
+    })
+</script>
+
+</body>
+</html>

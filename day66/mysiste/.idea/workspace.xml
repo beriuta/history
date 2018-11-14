@@ -2,61 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca5cb851-3164-427a-a02d-996cabce8477" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ORMF查询和Q查询.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ORM数据查询复习.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ORM聚合和分组.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ORMl练习.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/周末作业.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/多对多一对多的管理方法.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/对象属性修改和update修改的区别.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/自关联练习.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../查找评论级数.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/add_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/add_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/add_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/class_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/edit_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/edit_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/edit_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/student_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management/templates/teacher_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management2/applistion/templatetags/my_extends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management2/templates/mathor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management2/templates/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management2/templates/t.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../management2/templates/xx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../myfood/templates/add_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../myfood/templates/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../myfood/templates/book.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../myfood/templates/edit_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mymodel/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mymodel/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mymodel/orm_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mypro/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mypro/applistion/templatetags/files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mypro/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mypro/templates/t1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mystest/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mystest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mystest/ORM关联字段基于QuerySet的查询.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../mystest/ORM基于字段关联对象的查询.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../datas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../datas/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day11/static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../day11/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../myfood/app01/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../myfood/app02/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../myfood/templates/book_list2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../myfood/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../myfood/applistion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/applistion/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../myfood/applistion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/applistion/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfood/myfood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/myfood/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../myfood/myfood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/myfood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../myfood/templates/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/templates/book_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../myfood/templates/edit_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/templates/edit_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../myfood/templates/edit_publisher.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/templates/edit_publisher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../myfood/templates/publisher_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../myfood/templates/publisher_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,8 +62,9 @@
     <session id="-1964191004">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -151,65 +108,44 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5654321">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/周末作业.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="608">
-                  <caret line="101" selection-start-line="101" selection-end-line="101" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_author">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_book">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_book_author">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/apphomework/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-                  <folding>
-                    <marker date="1541907386742" expanded="true" signature="584:662" ph="..." />
-                    <marker date="1541907386742" expanded="true" signature="687:692" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/周末作业.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_author">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_book">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_book_author">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -245,8 +181,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="960" />
-    <option name="height" value="1030" />
+    <option name="x" value="605" />
+    <option name="width" value="1009" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -282,7 +219,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../myfood" />
+    <property name="last_opened_file_path" value="/media/beriuta/新加卷/python课程/day67/day67/about_ormday67" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -299,7 +236,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.周末作业">
+  <component name="RunManager" selected="Django server.mysiste">
     <configuration name="自关联练习" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mysiste" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -314,6 +251,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/自关联练习.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ORMl练习" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mysiste" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ORMl练习.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -358,28 +317,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/周末作业.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ORMl练习" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mysiste" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ORMl练习.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -438,13 +375,9 @@
       <item itemvalue="Python.ORMl练习" />
       <item itemvalue="Python.自关联练习" />
       <item itemvalue="Python.对象属性修改和update修改的区别" />
-      <item itemvalue="Python.多对多一对多的管理方法" />
-      <item itemvalue="Python.周末作业" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.周末作业" />
-        <item itemvalue="Python.多对多一对多的管理方法" />
         <item itemvalue="Python.对象属性修改和update修改的区别" />
         <item itemvalue="Python.自关联练习" />
         <item itemvalue="Python.ORMl练习" />
@@ -466,18 +399,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.089647815" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.104055494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" weight="0.32911393" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32911393" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32911393" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.21518987" />
@@ -485,11 +410,18 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" visible="true" weight="0.13553895" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32911393" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32911393" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32911393" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13553895" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,9 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <marker date="1541822261117" expanded="true" signature="98:103" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,9 +490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <marker date="1541820516595" expanded="true" signature="112:117" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,11 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <marker date="1541833127482" expanded="true" signature="100:105" ph="..." />
-            <marker date="1541833127482" expanded="true" signature="227:232" ph="..." />
-            <marker date="1541833127482" expanded="true" signature="401:406" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -635,24 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apphomework/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <marker date="1541907386742" expanded="true" signature="584:662" ph="..." />
-            <marker date="1541907386742" expanded="true" signature="687:692" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_book_author">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_author">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -667,10 +570,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://8815d03d-1c60-481b-a93e-e0587afa3a27/schema/day67/table/apphomework_book_author">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apphomework/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <marker date="1541907386742" expanded="true" signature="584:662" ph="..." />
+            <marker date="1541907386742" expanded="true" signature="687:692" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/周末作业.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="-34">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>

@@ -2,60 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="505d2d21-5f55-4838-85a0-77628e219542" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../day66/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/ORMF查询和Q查询.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/ORM数据查询复习.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/ORM聚合和分组.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/mysiste/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/mysiste/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/mysiste/ORMl练习.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/mysiste/周末作业.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/mysiste/多对多一对多的管理方法.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/mysiste/对象属性修改和update修改的区别.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/mysiste/自关联练习.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day66/查找评论级数.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/add_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/add_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/add_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/class_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/edit_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/edit_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/edit_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/student_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/teacher_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management2/applistion/templatetags/my_extends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management2/templates/mathor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management2/templates/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management2/templates/t.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management2/templates/xx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/book.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodel/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodel/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodel/orm_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/applistion/templatetags/files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/templates/t1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/ORM关联字段基于QuerySet的查询.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/ORM基于字段关联对象的查询.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../datas/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day11/static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day11/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/templates/jsajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moot/templates/upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app02/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/book_list2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle/static/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day66/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day66/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day66/mysiste/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day66/mysiste/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applistion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/applistion/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applistion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/applistion/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myfood/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myfood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myfood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edit_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/edit_publisher.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_publisher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/publisher_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publisher_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,27 +79,29 @@
     <session id="420470571">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="198" />
-          <entry key="html" value="2928" />
-          <entry key="py" value="3938" />
+          <entry key="html" value="4200" />
+          <entry key="py" value="5030" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2928" />
+          <entry key="HTML" value="4200" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="3938" />
+          <entry key="Python" value="5030" />
           <entry key="Scratch" value="198" />
         </counts>
       </usages-collector>
@@ -143,18 +112,18 @@
           <entry key="applistion_book" value="5" />
           <entry key="applistion_publisher" value="3" />
           <entry key="applistion_userinfo" value="2" />
-          <entry key="html" value="22" />
+          <entry key="html" value="25" />
           <entry key="js" value="1" />
-          <entry key="py" value="8" />
+          <entry key="py" value="15" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="13" />
-          <entry key="HTML" value="22" />
+          <entry key="HTML" value="25" />
           <entry key="JavaScript" value="1" />
-          <entry key="Python" value="8" />
+          <entry key="Python" value="15" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -162,24 +131,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applistion/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="154" column="22" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
+            <state relative-caret-position="60">
+              <caret line="65" column="54" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="54" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
-                <marker date="1541929463064" expanded="true" signature="454:459" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="651:656" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="765:770" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="1020:1025" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="1020:1160" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="1188:1189" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="1188:1640" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="1897:2017" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="3897:3902" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="4427:4432" ph="..." />
-                <marker date="1541929463064" expanded="true" signature="4494:4499" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="491:496" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="688:693" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="802:807" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="1057:1062" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="1057:1199" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="1229:1230" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="1229:2085" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="2342:2462" ph="..." />
+                <marker date="1542103705542" expanded="true" signature="4342:4347" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/publisher_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="181" column="35" selection-start-line="181" selection-start-column="35" selection-end-line="181" selection-end-column="35" />
+              <folding>
+                <element signature="e#5483#5490#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,8 +167,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myfood/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="184">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="25" />
+              <folding>
+                <element signature="e#640#680#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -210,7 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/myfood/settings.py" />
         <option value="$PROJECT_DIR$/myfood/__init__.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/add_publisher.html" />
@@ -221,12 +202,18 @@
         <option value="$PROJECT_DIR$/templates/edit_author.html" />
         <option value="$PROJECT_DIR$/templates/edit_publisher.html" />
         <option value="$PROJECT_DIR$/templates/author_list.html" />
-        <option value="$PROJECT_DIR$/templates/publisher_list.html" />
         <option value="$PROJECT_DIR$/templates/book_list.html" />
         <option value="$PROJECT_DIR$/applistion/models.py" />
         <option value="$PROJECT_DIR$/templates/book.html" />
+        <option value="$PROJECT_DIR$/app02/urls.py" />
+        <option value="$PROJECT_DIR$/app02/views.py" />
+        <option value="$PROJECT_DIR$/myfood/settings.py" />
         <option value="$PROJECT_DIR$/myfood/urls.py" />
+        <option value="$PROJECT_DIR$/app01/views.py" />
+        <option value="$PROJECT_DIR$/templates/book_list2.html" />
+        <option value="$PROJECT_DIR$/app01/urls.py" />
         <option value="$PROJECT_DIR$/applistion/views.py" />
+        <option value="$PROJECT_DIR$/templates/publisher_list.html" />
       </list>
     </option>
   </component>
@@ -246,6 +233,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,7 +265,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,12 +337,12 @@
     <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14087513" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10779082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19217491" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19217491" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -371,7 +358,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15901814" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32466063" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,13 +371,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/de928147-03a6-43b3-a6b5-95fca669ed69/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://de928147-03a6-43b3-a6b5-95fca669ed69/schema/day60/table/applistion_userinfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://de928147-03a6-43b3-a6b5-95fca669ed69/schema/day60/table/applistion_userinfo" />
     <entry file="file://$PROJECT_DIR$/templates/add_publisher.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -420,22 +401,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/edit_list.html" />
-    <entry file="file://$PROJECT_DIR$/myfood/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1022">
-          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bootstrap-3.3.7/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/publisher_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myfood/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -479,13 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_author.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="46" selection-end-line="38" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://de928147-03a6-43b3-a6b5-95fca669ed69/schema/day60/table/applistion_book">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -500,19 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applistion/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-          <folding>
-            <marker date="1541926281714" expanded="true" signature="100:105" ph="..." />
-            <marker date="1541926281714" expanded="true" signature="275:280" ph="..." />
-            <marker date="1541926281714" expanded="true" signature="399:404" ph="..." />
-            <marker date="1541926281714" expanded="true" signature="636:641" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/edit_book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -524,36 +471,115 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="107" selection-start-line="107" selection-end-line="107" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfood/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app02/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1541931066680" expanded="true" signature="97:102" ph="..." />
+            <marker date="1541931066680" expanded="true" signature="162:167" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/book_list2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app02/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <marker date="1541938404479" expanded="true" signature="443:448" ph="..." />
+            <marker date="1541938404479" expanded="true" signature="567:572" ph="..." />
+            <marker date="1541938404479" expanded="true" signature="567:615" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="46" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applistion/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myfood/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="184">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="e#640#680#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/applistion/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="154" column="22" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
+        <state relative-caret-position="60">
+          <caret line="65" column="54" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="54" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
-            <marker date="1541929463064" expanded="true" signature="454:459" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="651:656" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="765:770" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="1020:1025" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="1020:1160" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="1188:1189" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="1188:1640" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="1897:2017" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="3897:3902" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="4427:4432" ph="..." />
-            <marker date="1541929463064" expanded="true" signature="4494:4499" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="491:496" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="688:693" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="802:807" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="1057:1062" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="1057:1199" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="1229:1230" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="1229:2085" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="2342:2462" ph="..." />
+            <marker date="1542103705542" expanded="true" signature="4342:4347" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/publisher_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="181" column="35" selection-start-line="181" selection-start-column="35" selection-end-line="181" selection-end-column="35" />
+          <folding>
+            <element signature="e#5483#5490#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

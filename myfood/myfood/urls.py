@@ -13,9 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
 from applistion import views
+from app01 import urls as app01_urls
+from app02 import urls as app02_urls
 
 urlpatterns = [
     url(r'^login/$', views.login),
@@ -35,10 +37,10 @@ urlpatterns = [
     url(r'^add_author/$', views.add_author),
     url(r'^edit_author/$', views.edit_author),
 
-    # 测试
-    url(r'^book/([0-9]{4})/$', views.c_book),  # book(request,2018)  位置传参
-    url(r'^book/(?P<year>[0-9]{4})/$', views.c_book),  # book(request,year=2018)  关键字参数
-    url(r'^blog/$',views.blog),
-    url(r'^blog/(?P<num>/d+)/$',views.blog),
+    # 把所有以app01开头的都交给app01.urls去处理
+    url(r'^app01/', include('app01.urls',namespace='app01')),  # url不能以$结尾
+    # 把所有以app02开头的都交给app02.urls去处理
+    url(r'^app02/', include('app02.urls',namespace='app02'))
+
 
 ]

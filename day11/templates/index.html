@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="num" id="i1">
+<input type="submit">
+<script src="/static/jquery.js"></script>
+<script>
+    $('#i1').on('blur',function () {
+        $.ajax({
+            url:'/index/',
+            type:'POST',
+            data:{'name':$('#i1').val()},
+            success:function (res) {
+                alert(res)
+            },
+            error:function (err) {
+                alert(err)
+            }
+        })
+    })
+</script>
+</body>
+</html>

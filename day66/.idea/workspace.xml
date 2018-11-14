@@ -2,47 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="291008ee-a2b1-4e5d-9548-a86d357762e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ORMF查询和Q查询.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ORM数据查询复习.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ORM聚合和分组.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/查找评论级数.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/add_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/add_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/add_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/class_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/edit_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/edit_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/edit_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/student_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../management/templates/teacher_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/add_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/edit_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodel/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodel/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mymodel/orm_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/applistion/templatetags/files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/templates/t1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/ORM关联字段基于QuerySet的查询.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mystest/ORM基于字段关联对象的查询.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../datas/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myfood/app01/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myfood/app02/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../myfood/templates/book_list2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysiste/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mysiste/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myfood/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myfood/applistion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/applistion/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfood/myfood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/myfood/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myfood/myfood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/myfood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/book_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/edit_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/edit_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/edit_publisher.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/edit_publisher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/publisher_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/publisher_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,9 +56,9 @@
     <session id="990304052">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -135,22 +102,22 @@
     <favorites_list name="day66" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5670038">
+    <splitter split-orientation="horizontal" split-proportion="0.6302149">
       <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ORM聚合和分组.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="3" selection-end-column="69" />
+                <state relative-caret-position="546">
+                  <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ORMF查询和Q查询.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="870">
+                <state relative-caret-position="667">
                   <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="30" selection-end-column="52" />
                 </state>
               </provider>
@@ -177,7 +144,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/applistions/models.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -188,7 +155,6 @@
                     <marker date="1541815933568" expanded="true" signature="213:218" ph="..." />
                     <marker date="1541815933568" expanded="true" signature="386:391" ph="..." />
                     <marker date="1541815933568" expanded="true" signature="564:569" ph="..." />
-                    <marker date="1541815933568" expanded="true" signature="852:1053" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -241,6 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,7 +229,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,7 +236,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="/media/beriuta/新加卷/python课程/day66/day66/about_orm2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -337,28 +303,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ORM聚合和分组" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="day66" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ORM聚合和分组.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="ORMF查询和Q查询" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="day66" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -373,6 +317,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ORMF查询和Q查询.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ORM聚合和分组" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="day66" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ORM聚合和分组.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -408,13 +374,11 @@
       <item itemvalue="Django server.day66" />
       <item itemvalue="Python.查找评论级数" />
       <item itemvalue="Python.ORM数据查询复习" />
-      <item itemvalue="Python.ORM聚合和分组" />
       <item itemvalue="Python.ORMF查询和Q查询" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ORMF查询和Q查询" />
-        <item itemvalue="Python.ORM聚合和分组" />
         <item itemvalue="Python.ORM数据查询复习" />
         <item itemvalue="Python.查找评论级数" />
       </list>
@@ -435,17 +399,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49929875" visible="true" weight="0.1307364" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49929875" visible="true" weight="0.0" />
       <window_info id="Favorites" order="1" sideWeight="0.50070125" side_tool="true" weight="0.1307364" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32911393" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32911393" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.17951669" />
@@ -453,11 +411,18 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" visible="true" weight="0.15581644" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32911393" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32911393" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15581644" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,9 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="69" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -542,28 +504,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ORMF查询和Q查询.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ORM聚合和分组.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://aaa1b74b-8be1-4da1-b21b-810646c421cf/schema/day66/table/applistions_myclass">
+    <entry file="file://$PROJECT_DIR$/ORMF查询和Q查询.html" />
+    <entry file="das://aaa1b74b-8be1-4da1-b21b-810646c421cf/schema/day66/table/applistions_student">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://aaa1b74b-8be1-4da1-b21b-810646c421cf/schema/day66/table/applistions_student">
+    <entry file="das://aaa1b74b-8be1-4da1-b21b-810646c421cf/schema/day66/table/applistions_myclass">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -579,15 +528,21 @@
             <marker date="1541815933568" expanded="true" signature="213:218" ph="..." />
             <marker date="1541815933568" expanded="true" signature="386:391" ph="..." />
             <marker date="1541815933568" expanded="true" signature="564:569" ph="..." />
-            <marker date="1541815933568" expanded="true" signature="852:1053" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ORMF查询和Q查询.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="667">
           <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="30" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ORM聚合和分组.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
