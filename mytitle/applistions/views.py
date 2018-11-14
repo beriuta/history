@@ -102,8 +102,14 @@ class LoginViwe(View):
 
 @check_login
 def index(request):
-    data = Publisher.objects.all()
-    return render(request, 'index.html', {'publisher_list': data})
+    # data = Publisher.objects.all()
+    print('执行视图函数了')
+    # return render(request, 'index.html', {'publisher_list': data})
+    rep = HttpResponse('我是原本的rep方法')
+    def render():
+        return HttpResponse('我是替换render的自定义的render方法')
+    rep.render = render
+    return rep
 
 
 def delete_publisher(request):
@@ -122,6 +128,7 @@ def delete_publisher(request):
 
 @check_login
 def home(request):
+
     return HttpResponse('home!')
 
 
@@ -129,7 +136,13 @@ def home(request):
 class UserInfoView(View):
     @method_decorator(check_login)
     def dispatch(self, request, *args, **kwargs):
-        return super(UserInfoView, self).dispatch(self, *args, **kwargs)
+        return super(UserInfoView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
         return render(request, 'xxx.html')
+
+
+def rep(request):
+    print(request)
+    print('in rep视图函数')
+    raise ValueError('我自己报的错误')
