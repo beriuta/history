@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改学生</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.css">
+</head>
+<body>
+{#页头#}
+<div class="container">
+    <div class="page-header" style="text-align: center">
+        <h1 style="color: teal">Class management system
+            <small>Table operation</small>
+        </h1>
+    </div>
+    <form class="col-lg-8" action="" method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1" style="font-size: 20px">学生名称</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{ student.s_name }}" name="name">
+        </div>
+        <div>
+            <label for="exampleInputEmail1" style="font-size: 20px">选择班级</label>
+            <select name="id" id="">
+                {% for class in class_list %}
+                    {% if class == student.class_name %}
+                        <option selected value="{{ class.id }}">{{ class.c_name }}</option>
+                        {% else %}
+                        <option value="{{ class.id }}">{{ class.c_name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default" style="float: right">Submit</button>
+    </form>
+
+</div>
+<script src="/static/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7/js/bootstrap.js"></script>
+</body>
+</html>

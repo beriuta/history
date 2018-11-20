@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/css/bootstrap.css' %}">
+</head>
+<body>
+{% load my_extends %}
+<p>{% sss 5 8 %}</p>
+<hr>
+{% my_page 5 %}
+{% my_page 66 %}
+<script src="{% static 'bootstrap-3.3.7/js/bootstrap.js' %}"></script>
+<script src="{% static 'jquery.js' %}"></script>
+</body>
+</html>

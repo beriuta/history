@@ -2,34 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ad9c346-df61-4507-b083-a998d01fcdcb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/class_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/student_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/teacher_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/add_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/author_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfood/templates/edit_author.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/applistion/templatetags/files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/static/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mypro/templates/t1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../datas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../datas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/applistion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/applistion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/myfood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/myfood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/book_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/edit_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/edit_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/edit_publisher.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/edit_publisher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myfood/templates/publisher_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myfood/templates/publisher_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle22/templates/from.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle3/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle3/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle3/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle3/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle3/templates/rag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle3/templates/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle4/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle4/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle4/static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle4/templates/change_pwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle4/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle4/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle4/templates/reg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle5/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle5/center/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle5/center/s1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle5/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle5/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle5/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle6/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle6/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle6/applstions/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle6/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle6/templates/change_pwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle6/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mytitle6/templates/rag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../management2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../management2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../management2/management/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../management2/management/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mytitle22/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mytitle22/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mytitle22/applistions/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mytitle22/applistions/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mytitle22/mytitle22/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mytitle22/mytitle22/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mytitle22/mytitle22/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mytitle22/mytitle22/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mytitle22/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mytitle22/templates/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,13 +84,6 @@
         <item name="day62@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="day62: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="applistion_student: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="day62@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="day62: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="applistion_teacher: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
@@ -109,11 +110,11 @@
     <session id="545694325">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -134,23 +135,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="applistion_class" value="1" />
-          <entry key="applistion_student" value="1" />
-          <entry key="applistion_teacher" value="1" />
-          <entry key="applistion_teacher_class_name" value="1" />
+          <entry key="applistion_class" value="2" />
+          <entry key="applistion_student" value="2" />
+          <entry key="applistion_teacher" value="2" />
+          <entry key="applistion_teacher_class_name" value="2" />
           <entry key="applistion_userinfo" value="1" />
           <entry key="html" value="15" />
           <entry key="js" value="1" />
-          <entry key="py" value="5" />
+          <entry key="py" value="6" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="5" />
+          <entry key="Database Element" value="9" />
           <entry key="HTML" value="15" />
           <entry key="JavaScript" value="1" />
-          <entry key="Python" value="5" />
+          <entry key="Python" value="6" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -159,22 +160,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/management/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding>
-                <element signature="e#644#676#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/applistion/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+            <state relative-caret-position="177">
+              <caret line="111" column="20" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -182,20 +171,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/edit_teacher.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/applistion/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/edit_student.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" selection-start-line="20" selection-end-line="31" selection-end-column="14" />
+            <state relative-caret-position="230">
+              <caret line="10" selection-start-line="10" selection-end-line="27" selection-end-column="51" />
+              <folding>
+                <marker date="1541210202392" expanded="true" signature="97:141" ph="..." />
+                <marker date="1541210202392" expanded="true" signature="222:227" ph="..." />
+                <marker date="1541210202392" expanded="true" signature="352:489" ph="..." />
+                <marker date="1541210202392" expanded="true" signature="531:536" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -277,7 +263,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="960" />
+    <option name="x" value="960" />
+    <option name="width" value="950" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -286,7 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,6 +310,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,9 +381,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1030" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.076307364" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.100853786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -409,7 +395,7 @@
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32911393" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32911393" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
@@ -417,7 +403,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13553895" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.13553895" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,20 +443,6 @@
     <entry file="file://$PROJECT_DIR$/static/bootstrap-3.3.7/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_class">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_userinfo">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -485,37 +457,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_teacher_class_name">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_teacher">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/student_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/applistion/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="14" />
-          <folding>
-            <marker date="1541210202392" expanded="true" signature="97:141" ph="..." />
-            <marker date="1541210202392" expanded="true" signature="222:227" ph="..." />
-            <marker date="1541210202392" expanded="true" signature="352:489" ph="..." />
-            <marker date="1541210202392" expanded="true" signature="531:536" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -528,7 +473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/management/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="460">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="e#644#676#0" expanded="true" />
@@ -580,10 +525,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applistion/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+        <state relative-caret-position="177">
+          <caret line="111" column="20" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_teacher">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_teacher_class_name">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_class">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9edc866c-7bb3-4019-b326-67362450d0bc/schema/day62/table/applistion_student">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applistion/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" selection-start-line="10" selection-end-line="27" selection-end-column="51" />
+          <folding>
+            <marker date="1541210202392" expanded="true" signature="97:141" ph="..." />
+            <marker date="1541210202392" expanded="true" signature="222:227" ph="..." />
+            <marker date="1541210202392" expanded="true" signature="352:489" ph="..." />
+            <marker date="1541210202392" expanded="true" signature="531:536" ph="..." />
           </folding>
         </state>
       </provider>

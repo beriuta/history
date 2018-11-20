@@ -19,5 +19,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^login/', views.login),
-    url(r'^home/', views.home)
+    url(r'^home/', views.home),
+    url(r'^from/', views.FromView.as_view())
 ]

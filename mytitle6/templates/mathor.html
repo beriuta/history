@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看老师</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/css/bootstrap.css' %}">
+    <style>
+        body {
+            padding-bottom: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="" style="background-color: darkcyan">
+    <div class="container">
+        <div class="container-fluid" id="d1">
+            <!-- Brand and toggle get grouped for better mobile display -->
+           {% include 'nav.html' %}
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
+
+
+{#左侧栏#}
+
+<div class="list-group col-sm-2" style="text-align: center">
+    <a type="button" class="list-group-item {% if class_list %}active{% endif %}" href="/class_list/">班级表格</a>
+    <a type="button" class="list-group-item {% if student_list %}active{% endif %}" href="/student_list/">学生表格</a>
+    <a type="button" class="list-group-item {% if teacher_list %}active{% endif %}" href="/teacher_list/">老师表格</a>
+
+</div>
+
+
+{#页头#}
+<div class="container">
+    <div class="page-header">
+        <h1>Class management system
+            <small>Table operation</small>
+        </h1>
+    </div>
+    {#    表格#}
+    <div class="row">
+        <div class="panel panel-info">
+            <div class="panel-heading" style="text-align: center;font-size: 25px">表格操作</div>
+            <div class="panel-body">
+                {% block page_table %}
+
+                {% endblock %}
+            </div>
+
+
+            {#分页#}
+            <nav aria-label="Page navigation" style="float: right">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'jquery.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7/js/bootstrap.js' %}"></script>
+
+</body>
+</html>

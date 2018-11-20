@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/css/bootstrap.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        <span class="help-block" style="color: #c9302c"></span>
+                    </div>
+                {% endfor %}
+            <div>
+                <button type="button" id="b1" class="btn btn-success">注册</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="{% static 'jquery.js' %}"></script>
+<script src="{% static 'bootstrap-3.3.7/js/bootstrap.js' %}"></script>
+<script>
+    $('#b1').click(function () {
+        var dataObj = {};
+        $('input').each(function () {
+            dataObj[$(this).attr('name')] = $(this).val();
+        });
+        console.log(dataObj);
+        console.log('-----------------------------------------------------------------');
+        // 取到input标签的值
+        $.ajax({
+            url:'/reg/',
+            type:'post',
+            data:dataObj,
+            success:function (res) {
+                console.log(res);
+                // 把所有的错误提示信息展示到页面的指定位置
+                if (res.code === 0){
+                    // 没错
+                    location.href = res.url;
+                }else{
+                    $.each(res.error_msg,function (k,v) {
+                        // 根据k找到对应的input框,把v中第一个字符串展示出来
+                        $('#id_'+k).next('span').text(v[0]).parent().addClass('has_error')
+                    })
+                }
+            }
+        });
+        // input标签获取焦点之后清除之前的错误提示
+        $('form input').focus(function () {
+            $(this).next('span').text('').parent().removeClass('has-error')
+        })
+    })
+</script>
+</body>
+</html>

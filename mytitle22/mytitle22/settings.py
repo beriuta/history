@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+from django.middleware.csrf import CsrfViewMiddleware
 ROOT_URLCONF = 'mytitle22.urls'
 
 TEMPLATES = [

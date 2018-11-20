@@ -1,0 +1,31 @@
+{% extends 'mathor.html' %}
+
+{% block page_table %}
+    <a href="/add_student/">增加</a>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>id</th>
+            <th>学生名</th>
+            <th>班级名</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for student in student_list %}
+            <!--这个一定要写在tr上面-->
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ student.id }}</td>
+                <td>{{ student.s_name }}</td>
+                <td>{{ student.class_name.c_name }}</td>
+                <td>
+                    <a href="/edit_student/?id={{ student.id }}">修改</a>
+                    <a href="/delete_student/?id={{ student.id }}">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

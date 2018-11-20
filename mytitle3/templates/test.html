@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+</head>
+<body>
+<form action="/test/" method="post">
+    {% csrf_token %}
+    <div>
+        {% for field in form %}
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            <span>{{ field.errors.0 }}</span>
+        {% endfor %}
+    </div>
+    <input type="submit">
+</form>
+</body>
+</html>
