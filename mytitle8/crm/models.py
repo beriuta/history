@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.utils.translation import ugettext_lazy as _
 from multiselectfield import MultiSelectField
+from django.utils.safestring import mark_safe
 
 # 课程
 course_choices = (('Linux', 'Linux中高级'),
@@ -87,7 +88,31 @@ class Customer(models.Model):
     # 外键关联
     consultant = models.ForeignKey('UserProfile', verbose_name="销售", related_name='customers', blank=True, null=True, )
     # 多对多关联
-    class_list = models.ManyToManyField('ClassList', verbose_name="已报班级", )
+    class_list = models.ManyToManyField('ClassList', verbose_name="已报班级", null=True,blank=True)
+
+    class Meta:
+        verbose_name = '客户'
+        verbose_name_plural = '客户'
+
+    def __str__(self):
+        return '{}_{}'.format(self.name,self.qq)
+
+    # 自定义类的方法
+    def show_class_list(self):
+        return '|'.join([str(i) for i in self.class_list.all()])
+
+    # 展示状态
+    def show_status(self):
+        _status_color = {
+            'signed': "blue",
+            'unregistered':"red",
+            'studying': 'orange',
+            'paid_in_full': "green"
+        }
+        return mark_safe('<span style="background-color: {};color: white">{}</span>'.format(
+            _status_color[self.status],
+            self.get_status_display()
+        ))
 
 
 class Campuses(models.Model):
@@ -97,12 +122,20 @@ class Campuses(models.Model):
     name = models.CharField(verbose_name='校区', max_length=64)
     address = models.CharField(verbose_name='详细地址', max_length=512, blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = '校区表'
+        verbose_name_plural = verbose_name
+
+
 
 class ContractTemplate(models.Model):
     """
     合同模板表
     """
-    name = models.CharField("合同名称", max_length=128, unique=True)
+    name = models.CharField("合同名称", max_length=128, unique=True)  # 这些简写的是verbose_name='合同名称'
     content = models.TextField("合同内容")
     date = models.DateField(auto_now=True)
 
@@ -124,8 +157,14 @@ class ClassList(models.Model):
     class_type = models.CharField(choices=class_type_choices, max_length=64, verbose_name='班额及类型', blank=True,
                                   null=True)
 
+
     class Meta:
         unique_together = ("course", "semester", 'campuses')
+        verbose_name = '班级表'
+        verbose_name_plural =verbose_name
+
+    def __str__(self):
+        return '{}-{}-{}'.format(self.get_course_display(),self.semester,self.campuses)
 
 
 class ConsultRecord(models.Model):

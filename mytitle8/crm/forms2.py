@@ -1,5 +1,5 @@
 from django import forms
-from crm.models import UserProfile
+from crm.models import UserProfile, Campuses, Customer
 from django.core.exceptions import ValidationError
 
 
@@ -17,27 +17,28 @@ class RegForm(forms.ModelForm):
         # 按顺序展示列表中列出来的字段
         # exclude = ['']  # 把不需要展示的字段排除,展示剩下的字段
         labels = {
-            'email':'邮箱'
+            'email': '邮箱'
         }
         error_messages = {
-            'password':{
-                'min-length':'密码最短8位',
+            'password': {
+                'min-length': '密码最短8位',
             }
         }
         widgets = {
-            'password':forms.widgets.PasswordInput(),
-            're_password':forms.widgets.PasswordInput()
+            'password': forms.widgets.PasswordInput(),
+            're_password': forms.widgets.PasswordInput()
         }
 
-    def __init__(self,*args,**kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         print(self.fields.values())
         for field in self.fields.values():
-            field.widget.attr.update({'class':'form-control'})
+            field.widget.attrs.update({'class': 'form-control'})
 
     def clean_email(self):  # 局部钩子
         email_value = self.cleaned_data.get('email')
         is_exist = UserProfile.objects.filter(email=email_value)
+        print(is_exist)
         if is_exist:
             raise ValidationError('邮箱已被注册')
         else:
@@ -49,5 +50,21 @@ class RegForm(forms.ModelForm):
         if pwd_value == re_pwd_value:
             return self.cleaned_data
         else:
-            self.add_error('re_password','两次密码是不一样')
+            self.add_error('re_password', '两次密码是不一样')
             raise ValidationError('两次密码不一致')
+
+
+class CustomerForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(CustomerForm, self).__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs.update({'class': 'form-control'})
+
+    class Meta:
+        model = Customer
+        fields = '__all__'
+        widgets = {
+            'course': forms.widgets.SelectMultiple,
+            'birthday': forms.widgets.DateInput(attrs={'type': 'date'})
+        }
+
