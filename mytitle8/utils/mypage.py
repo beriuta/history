@@ -6,33 +6,33 @@
 
 class Pagination(object):
 
-    def __init__(self, current_page, total_count, per_page=10, show_page=9):
+    def __init__(self, current_page, total_count, url_prefix, per_page=10, show_page=9):
         """
         初始化分分页器
+        :param url_prefix: a标签的URL前缀
         :param current_page: 当前页码数
         :param total_count: 数据总数
         :param per_page: 每一页显示多少数据， 默认值是10
         :param show_page: 页面显示的页码数， 默认值是9
         """
-
-        # 每一页显示10条数据
+        # 0.分页的URL前缀
+        self.url_prefix = url_prefix
+        # 1. 每一页显示10条数据
         self.per_page = per_page
-
         # 2. 计算需要多少页
         total_page, more = divmod(total_count, per_page)
         if more:
             total_page += 1
         self.total_page = total_page
-
         # 3. 当前页码
         try:
             current_page = int(current_page)
         except Exception as e:
             current_page = 1
+        current_page = total_page if current_page > total_page else current_page
         # 页码必须是大于0的数
         if current_page < 1:
             current_page = 1
-        current_page = total_page if current_page > total_page else current_page
         self.current_page = current_page
         # 4. 页面最多显示的页码数
         self.show_page = show_page
@@ -72,20 +72,21 @@ class Pagination(object):
         # 添加分页代码的前缀
         page_list.append('<nav aria-label="Page navigation"><ul class="pagination">')
         # 添加首页
-        page_list.append('<li><a href="/publisher_list/?page=1">首页</a></li>')
+        page_list.append('<li><a href="{}?page=1">首页</a></li>'.format(self.url_prefix))
         # 添加上一页
         if self.current_page - 1 < 1:  # 已经到头啦，不让点上一页啦
             page_list.append(
                 '<li class="disabled"><a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>')
         else:
             page_list.append(
-                '<li><a href="/publisher_list/?page={}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>'.format(
+                '<li><a href="{}?page={}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>'.format(
+                    self.url_prefix,
                     self.current_page - 1))
         for i in range(show_page_start, show_page_end + 1):
             if i == self.current_page:
-                s = '<li class="active"><a href="/publisher_list/?page={0}">{0}</a></li>'.format(i)
+                s = '<li class="active"><a href="{1}?page={0}">{0}</a></li>'.format(i, self.url_prefix)
             else:
-                s = '<li><a href="/publisher_list/?page={0}">{0}</a></li>'.format(i)
+                s = '<li><a href="{1}?page={0}">{0}</a></li>'.format(i, self.url_prefix)
             page_list.append(s)
         # 添加下一页
         if self.current_page + 1 > self.total_page:
@@ -93,10 +94,12 @@ class Pagination(object):
                 '<li class="disabled"><a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>')
         else:
             page_list.append(
-                '<li><a href="/publisher_list/?page={}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>'.format(
-                    self.current_page + 1))
+                '<li><a href="{}?page={}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>'.format(
+                    self.url_prefix,
+                    self.current_page + 1)
+            )
         # 添加尾页
-        page_list.append('<li><a href="/publisher_list/?page={}">尾页</a></li>'.format(self.total_page))
+        page_list.append('<li><a href="{}?page={}">尾页</a></li>'.format(self.url_prefix, self.total_page))
         # 添加分页代码的后缀
         page_list.append('</ul></nav>')
         page_html = ''.join(page_list)

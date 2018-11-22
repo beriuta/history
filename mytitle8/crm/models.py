@@ -130,7 +130,6 @@ class Campuses(models.Model):
         verbose_name_plural = verbose_name
 
 
-
 class ContractTemplate(models.Model):
     """
     合同模板表

@@ -22,11 +22,17 @@ urlpatterns = [
     url(r'^login/', views.login),
     url(r'^reg/', views.reg),
     url(r'^index/', views.index),
-    url(r'^customer_list/', views.customer_list),
+    url(r'^customer_list/', views.CustomerListView.as_view()),  # 所有客户列表
+    url(r'^my_customer/', views.CustomerListView.as_view()),  # 我的客户列表
     url(r'^reg2/', views.RegView.as_view()),
     # url(r'^add/', views.add_customer),
     # url(r'^edit/(\d+)/$', views.edit_customer),
     # ----------------把add跟edit放在一个视图函数里------------
     url(r'add/', views.customer),
     url(r'edit/(\d+)/$', views.customer),
+    # --------------------沟通记录表-------------
+    url(r'consult_record/$',views.consult_record_list),
+    url(r'add_consult_record/$',views.consult_record),
+    url(r'edit_consult_record/(\d+)$',views.consult_record),
+
 ]
