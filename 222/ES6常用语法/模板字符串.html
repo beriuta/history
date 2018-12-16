@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="wz">
+    <h2>爱好</h2>
+</div>
+<script>
+    let ele = document.getElementById('wz');
+    ele.innerText = '爱好翻车';
+    let hobby1 = '放羊';
+    let hobby2 = '放牛';
+    let hobby3 = '种菜';
+    ele.innerHTML = `<ul>
+<li>${hobby1}</li>
+<li>${hobby2}</li>
+<li>${hobby3}</li>
+</ul>`
+</script>
+</body>
+</html>

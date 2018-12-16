@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <old></old>
+    <young></young>
+</div>
+
+<script>
+    let conter = new Vue();
+
+    let young_baby ={
+        template: `
+        <div>
+        <h3>这是小宝宝</h3>
+        <button @click="my_click">点击对大宝宝说</button>
+</div>
+        `,
+        methods:{
+            my_click(){
+                // 向中转提交信息
+                conter.$emit('young_say','(｡･∀･)ﾉﾞ嗨!大宝宝!')
+            }
+        }
+    };
+
+    let old_baby = {
+        template:`<div>
+                <h3>这是大宝宝</h3>
+                <h4>小宝宝对大宝宝说:{{ baby_say }}</h4>
+                </div>`,
+        data(){
+            return {
+                baby_say:''
+            }
+        },
+        mounted(){  // 安装
+            // 组件加载完成之后执行的方法
+            // 接收中转给的消息
+            let that = this;  // 这个作用域的this是在中转,需要把他赋值给现在的这个大宝宝的作用域
+            conter.$on('young_say',function (data) {
+                that.baby_say = data  // 把获取到的信息赋值给大宝宝已有的变量中
+            })
+        }
+    };
+    const num = new Vue({
+        el:'#num',
+        components:{
+            old:old_baby,
+            young:young_baby
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <ul>
+        <!--按位置传参-->
+        <li v-for="(couse,index) in couse_list" :key="index">{{couse}}{{index}}</li>
+        <!--关键字传参-->
+        <li v-for="(stu,index) in s1">{{stu.name}}{{stu.age}}</li>
+    </ul>
+</div>
+<script>
+    let name = new Vue({
+        el: '#num',
+        data: {
+            couse_list: ['python', 'go', 'lunix'],
+            s1: [{
+                name: 'hehe',
+                age: 18
+            },
+                {
+                    name: 'hrhr',
+                    age: 24
+                }
+            ]
+        }
+    })
+</script>
+</body>
+</html>

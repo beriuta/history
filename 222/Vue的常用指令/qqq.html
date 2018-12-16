@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <style>
+        .my_box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="my_box" v-pin.right.bottom="pinned">
+
+    </div>
+
+    <h1 v-my_text="name"></h1>
+</div>
+<script>
+    Vue.directive("pin", function (el, binding) {
+        console.log(el);
+        // el 是我们绑定指令的标签元素
+        console.log(binding);
+        // binding 指令的所有信息
+        let gps = binding.modifiers;
+        // {right: true, top: true}
+        if (binding.value) {
+            // 给div定位到浏览器的右下角
+            el.style.position = "fixed";
+            // el.style.right = 0;
+            // el.style.bottom = 0;
+            for (let posi in gps) {
+                el.style[posi] = 0;
+            }
+        }
+        else {
+            el.style.position = "static";
+        }
+    });
+
+    // 自定义的v-text
+     Vue.directive('my_text',function (el,binding) {
+        el.innerText = binding.value;
+    });
+
+
+    const app = new Vue({
+        el: "#app",
+        data: {
+            pinned: true,
+            name: "gaoxin"
+        }
+
+    })
+</script>
+
+</body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <yyy>
+        <p slot="wahaha">我是哇哈哈1</p>
+        <p slot="ruwawa">我是乳娃娃1</p>
+    </yyy>
+    <yyy>
+        <h4 slot="wahaha">我是哇哈哈2</h4>
+        <h4 slot="ruwawa">我是乳娃娃2</h4>
+    </yyy>
+</div>
+<template id="my_temp">
+    <div>
+        <h3>这是一个组件</h3>
+        <hr>
+        <slot name="wahaha"></slot>  <!--定义了两个sole标签,但是不能直接在中间写入文本-->
+        <slot name="ruwawa"></slot>
+    </div>
+</template>
+<script>
+    let yyy = {
+        template: '#my_temp'
+    };
+
+    const num = new Vue({
+        el: '#num',
+        components: {
+            yyy: yyy
+        }
+    })
+</script>
+</body>
+</html>

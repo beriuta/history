@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <h3>{{ name }}</h3>
+    <h3>{{ attributes }}</h3>
+    <h3>{{ obj }}</h3>
+    <button @click="my_click">点击变换文本</button>
+
+</div>
+<script>
+    const num = new Vue({
+        el:'#num',
+        data:{
+            name:'小白兔',  // 字符串
+            attributes:['吃胡萝卜','卖萌'], // 属性  列表
+            obj:{  // 对象
+                name:'小包',
+                age:3
+            }
+        },
+        methods:{
+            my_click:function () {
+                this.name = '小可爱';
+                // this.attributes.push('新来的');
+                this.attributes[1] = '萌新';
+                // 这样改是没有反应的 数组是监听不到字符串的修改的,只能监听到长度的变化,所以要用$set()
+                // this.obj['sex'] = '女兔子';
+                // this.obj['name'] = '兔包'
+                num.$set(this.attributes,1,'萌新'),  // 数组按照索引修改
+                num.$set(this.obj,'sex','女兔子'),  // 对象增加键值对
+                num.$set(this.obj,'name','兔包')  // 对象修改键值对
+            }
+        },
+        watch:{  // 设置要监听的属性名
+            name:{
+                handler:function (val,oldVal) {
+                    console.log(val);
+                    console.log(oldVal)
+                }
+            },
+            attributes:{
+                handler:function (val,oldVal) {
+                    console.log(val);
+                    console.log(oldVal)
+                }
+            },
+            obj:{
+                handler:function (val,oldVal) {
+                    console.log(val);
+                    console.log(oldVal)
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

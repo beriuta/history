@@ -1,5 +1,5 @@
 from django import forms
-from crm.models import UserProfile, Campuses, Customer
+from crm.models import UserProfile, Campuses, Customer, ConsultRecord,Enrollment,ClassList,CourseRecord,StudyRecord
 from django.core.exceptions import ValidationError
 
 
@@ -68,3 +68,49 @@ class CustomerForm(forms.ModelForm):
             'birthday': forms.widgets.DateInput(attrs={'type': 'date'})
         }
 
+
+# 沟通记录的form
+class ConsultRecordForm(forms.ModelForm):
+    class Meta:
+        model = ConsultRecord
+        exclude = ['delete_status']  # 除去中括号里的字段,别的字段都显示
+
+    def __init__(self, *args, **kwargs):
+        super(ConsultRecordForm, self).__init__(*args, **kwargs)
+        self.fields['customer'] = forms.models.ModelChoiceField(
+            queryset=Customer.objects.filter(consultant=self.instance.consultant))
+        self.fields['customer'].widget.attrs.update({'class': 'form-control'})
+
+
+# 报名表
+class EnrollmentForm(forms.ModelForm):
+    class Meta:
+        model = Enrollment
+        exclude = ['contract_approved', 'delete_status']
+
+    def __init__(self, *args, **kwargs):
+        super(EnrollmentForm, self).__init__(*args, **kwargs)
+        # 限制添加报名表的时候只能选自己的私户
+        print(self.instance)
+        self.fields['customer'].choices = [(self.instance.customer.id, self.instance.customer.name)]
+
+
+# 班级表
+class ClassListForm(forms.ModelForm):
+    class Meta:
+        model = ClassList
+        fields = '__all__'
+
+
+# 课程记录表
+class CourseRecordForm(forms.ModelForm):
+    class Meta:
+        model = CourseRecord
+        fields = '__all__'
+
+
+# 学习记录表
+class StudyRecordForm(forms.Form):
+    class Meta:
+        model = StudyRecord
+        fields = ['student', 'attendance', 'score', 'homework_note']

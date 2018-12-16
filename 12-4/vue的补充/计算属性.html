@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <table>
+        <thead>
+        <tr>
+            <th>动物</th>
+            <th>数量</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>兔子</td>
+            <td><input type="text" v-model.number="rabbit"></td>
+        </tr>
+        <tr>
+            <td>猫</td>
+            <td><input type="text" v-model.number="cat"></td>
+        </tr>
+        <tr>
+            <td>花生</td>
+            <td><input type="text" v-model.number="peanut"></td>
+        </tr>
+        <tr>
+            <td>总数量</td>
+            <td>{{ sum1 }}</td>
+        </tr>
+        <tr>
+            <td>平均分</td>
+            <td>{{ average }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const num = new Vue({
+        el: '#num',
+        data: {  // 存储的数据
+            rabbit: '',
+            cat: '',
+            peanut: ''
+        },
+        method: {  // 方法
+        },
+        computed: {  // 计算 里面都是方法
+            sum1: function () {
+                return this.rabbit + this.cat + this.peanut
+            },
+            average: function () {
+                return this.sum1 / 3
+            }
+        }
+    })
+</script>
+</body>
+</html>

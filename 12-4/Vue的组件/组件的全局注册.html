@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <my_html></my_html>
+    <my_html></my_html>
+    <my_html></my_html>
+    <my_html></my_html>
+</div>
+
+<script>
+    Vue.component('my_html',{
+        template:
+            `<div><h3>{{ name }}</h3></div>`,
+        data(){
+            return {
+                name:'这是一个标题'
+            }
+        }
+
+    });
+    const num = new Vue({
+        el:'#num',
+    })
+</script>
+</body>
+</html>

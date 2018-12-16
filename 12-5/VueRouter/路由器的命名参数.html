@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue_router.js"></script>
+</head>
+<body>
+<div id="num">
+    <router-link :to="{name: 'home'}">首页</router-link>
+    <router-link :to="{name: 'course'}">课程详情</router-link>
+    <router-link :to="{name: 'user', params: {name: 'baby'}, query: {age: 38}}">宝贝详情</router-link>
+    <router-view></router-view>
+</div>
+
+<script>
+    // 定义路由和组件匹配规则
+    let url = [
+        {
+            path: '/',
+            name: 'home',
+            component: {
+                template: `<div><h3>这是home页面</h3></div>`
+            }
+        },
+        {
+            path: '/course',
+            name: 'course',
+            component: {
+                template: `<div><h3>这是页面</h3></div>`,
+            }
+        },
+
+        {
+            path: '/user/:name',
+            name: 'user',
+            component: {
+                template: `<div><h3>这是{{this.$route.params.name}}页面,并且她的狗{{this.$route.query.age}}岁了,并且获取路由的重定向名字{{this.$route.name}}</h3></div>`,
+
+                mounted() {  // 安装
+                    console.log(this.$route)
+                }
+            }
+        }
+    ];
+    // 实例化一个VueRouter对象
+    let router = new VueRouter({
+        routes: url
+    });
+
+    // 注册到根目录里面
+    const num = new Vue({
+        el: '#num',
+        router: router
+    })
+</script>
+</body>
+</html>

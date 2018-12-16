@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+
+    <button @click="my_click('笑')" v-on="{mouseenter: my_enter,mouseleave: my_move}">点击弹出笑</button>
+    <!--<button v-on="{mouseenter: my_enter, mouseleave: my_move}" v-on:click="my_click('吃')">点我</button>-->
+</div>
+<script>
+    let num = new Vue({
+        el:'#num',
+        data:{
+
+        },
+        methods:{  <!--这个单词是固定的,不能错-->
+            my_click: function(x){  <!--传入参数-->
+                alert('beriuta' + x)
+            },
+            my_enter: function(){
+                console.log('鼠标移入',)
+            },
+            my_move: function () {
+                console.log('鼠标移出')
+            }
+        }
+    })
+</script>
+</body>
+</html>

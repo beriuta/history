@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <div ref="test1">
+
+    </div>
+    <!--<button @click="my_click">点击显示文本</button>-->
+    <button v-on:click="my_click">点击显示文本</button>
+</div>
+
+<script>
+    const num = new Vue({
+        el:'#num',
+        methods:{
+            my_click:function () {
+                let ele = this.$refs.test1;
+                ele.innerText = '我是测试的'
+            }
+        }
+    })
+</script>
+</body>
+</html>

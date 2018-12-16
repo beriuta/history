@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <style>
+        .my_style{
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="num">
+    <div v-bind:class="{my_style: is_show}">
+
+    </div>
+    <img :src="my_img">  <!--引用网络上的图片-->
+</div>
+
+<script>
+    let num = new Vue({
+        el:'#num',
+        data:{
+            is_show:true,
+            my_img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543845490850&di=d28534b93d304a9c55d1238cccfca581&imgtype=0&src=http%3A%2F%2Fwww.hezebinzang.com%2Fphotofiles%2F180307%2F180307_58%2FbdJFU9avNO_small.jpg'
+        }
+    })
+</script>
+</body>
+</html>

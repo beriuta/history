@@ -28,9 +28,10 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 <li><a href="/customer_list/">客户列表</a></li>
-                <li><a href="my_customer/">我的客户</a></li>
-                <li><a href="/consult_record/">沟通记录</a></li>
-                <li><a href="https://v3.bootcss.com/examples/dashboard/#">Export</a></li>
+                <li><a href="/my_customer/">我的客户</a></li>
+                <li><a href="{% url 'consult_record' 0 %}">沟通记录</a></li>
+                <li><a href="{% url 'enrollment_list' 0 %}">查看报名表</a></li>
+                <li><a href="/class_list/">班级列表</a></li>
             </ul>
 
         </div>

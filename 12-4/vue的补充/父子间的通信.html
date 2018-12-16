@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <parent_component></parent_component>
+</div>
+<script>
+    let child = {
+        template: `<div>
+                    <h3>这是子组件的内容</h3>
+                    <h5>这是他爸说话的地方--->{{ parent_say_say}}</h5>
+                    </div>`,
+        props:['parent_say_say']
+    };
+
+    let parent = {
+        template:`<div>
+                <h3>这是一个父组件</h3>
+                <!--<h4 :parent_say_say="parent_say">这是子组件的地方</h4>  &lt;!&ndash;<!这里是child标签,因为要用到child组件&ndash;&gt; -->
+                <child_compontent :parent_say_say="parent_say"></child_compontent>
+                </div>`,
+        components:{
+            child_compontent:child
+        },
+        data(){
+            return {
+                parent_say:'好孩子~~~'
+            }
+        }
+    };
+
+    const num = new Vue({
+        el:'#num',
+        components: {
+            parent_component:parent
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--箭头函数-->
+<!--this &ndash;&gt; 当前的函数最近的调用者-->
+<!--取决于上下文的环境-->
+<script>
+    function f1() {
+        console.log(this)
+    }
+    f1();
+    let a1 = {
+        a:1,
+        func:f1
+    };
+    a1.func();
+    let a2 = {
+        a2:2,
+        func2:a1,
+    };
+    a2.func2.func()
+</script>
+</body>
+</html>

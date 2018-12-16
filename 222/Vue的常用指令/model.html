@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <input type="text" v-model.lazy.trim="username">
+    {{username}}
+    <pre>{{username}}</pre>
+    <input type="text" v-model.lazy.number="phone">
+    {{phone}}
+    {{typeof phone}}
+    <textarea name="" id="" cols="30" rows="10" v-model="arcitk"></textarea>
+
+    <select name="" id="" v-model="check" multiple>
+        <option value="1">西瓜</option>
+        <option value="2">南瓜</option>
+        <option value="3">东瓜</option>
+        <option value="4">方瓜</option>
+
+    </select>
+            {{check}}
+</div>
+
+<script>
+    let num = new Vue({
+        el:'#num',
+        data:{
+            username:'',
+            phone:'',
+            check:['1'],
+            arcitk:'',
+        }
+    })
+</script>
+</body>
+</html>

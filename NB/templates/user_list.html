@@ -1,0 +1,19 @@
+{% load cache %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ now }}
+<ul>
+    {% cache 5 '随机字符串'%}
+        {{ now }}
+        {% for user in user_list %}
+            <li>{{ user.name }} - {{ user.age }}</li>
+        {% endfor %}
+    {% endcache %}
+</ul>
+</body>
+</html>

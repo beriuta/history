@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>把拥有相同功能的哪些方法封装起来</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <com1></com1>
+    <com2></com2>
+</div>
+<script>
+    let base = {
+        data(){
+            return {
+                is_show:false
+            }
+        },
+        methods:{
+            show(){  // 显示文本
+                this.is_show = true
+            },
+            hide(){  // 隐藏文本
+                this.is_show = false
+            }
+        }
+
+    };
+
+    let com_mm = {  //鼠标移动到按钮上出现文本,移出按钮文本消失
+        template: `<div>
+                    <button @mouseenter="show" @mouseleave="hide">点击鼠标变换</button>
+                    <div v-show="is_show">啊!这是一个太阳!</div>
+                    </div>`,
+        mixins:[base]
+    };
+
+    let com_m = { // 点击隐藏,点击出现
+        template:`<div>
+                  <button @click="show">点击送太阳</button>
+                  <button @click="hide">点击收下太阳</button>
+                  <div v-show="is_show">啊!这是一个太阳!</div>
+                  </div>`,
+        mixins:[base],
+        data(){  // 属于自己的属性,base中默认is_show = false,但是可以自己定义默认为True
+            return {
+                is_show : true
+            }
+        }
+    };
+
+    const mun = new Vue({
+        el:'#num',
+        components:{
+            com1:com_m,
+            com2:com_mm
+        }
+    })
+</script>
+</body>
+</html>

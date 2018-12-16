@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <config></config>
+    <config></config>
+    <config></config>
+    <config></config>
+</div>
+<script>
+    let my_config = {
+        template: `<div><h3>这是一个局部组件</h3></div>`
+    };
+    const num = new Vue({
+        el:'#num',
+        components:{
+            config:my_config
+        }
+    })
+</script>
+</body>
+</html>

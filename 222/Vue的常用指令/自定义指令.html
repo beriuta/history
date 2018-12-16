@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <style>
+        .my_sty{
+            /*background-color: lightseagreen;*/
+            height: 20px;
+            width: 300px;
+            border:1px solid red
+        }
+    </style>
+</head>
+<body>
+<div id="num">
+    <div class="my_sty" v-pin.right.bottom="pinned">
+
+    </div>
+    <h1 v-my_text="name"></h1>
+</div>
+
+<script>
+    Vue.directive('pin',function (el,binding) {
+        console.log(el);
+        // el 是绑定指令的标签元素
+        console.log(binding);
+        // binding 指令的所有信息
+        let gps = binding.modifiers;
+        // {right:true,top:true}
+        if(binding.value){
+            // 给div定位到浏览器的右下角
+            el.style.position = 'fixed';
+            // el.style.right = 0;
+            // el.right.bottom = 0;
+            for(let posi in gps){
+                el.style[posi] = 0;
+            }
+        }
+        else{
+            el.style.position = 'static';
+        }
+    });
+    // 自定义的v-text
+    Vue.directive('my_text',function (el,binding) {
+        el.innerText = binding.value;
+    });
+
+
+    const num = new Vue({
+        el:'#num',
+        data:{
+            pinned:true,
+            name:'sss'
+        }
+    })
+</script>
+</body>
+</html>
+
+
+</html>

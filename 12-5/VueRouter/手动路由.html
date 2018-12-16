@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue_router.js"></script>
+</head>
+<body>
+<div id="num">
+    <router-link to="/">小猫</router-link>
+    <router-link to="/dog">小狗</router-link>
+    <router-link to="/dog_family">小狗之家</router-link>
+    <router-view></router-view>
+</div>
+
+<script>
+
+    let url = [
+        {
+            path:'/',
+            component:{
+                template:`<div><h2>这是小猫页面</h2><button @click="my_click">点击登录小狗之家</button></div>`,
+                methods:{
+                    my_click(){
+                        // 跳转到小狗之家页面
+                        console.log(this.$route);
+                        console.log(this.$router);
+                        console.log(this.$el);
+                        console.log(this.$data);
+                        this.$router.push('/dog_family')
+                    }
+                }
+            }
+        },
+        {
+            path:'/dog',
+            component:{
+                template:'<div><h2>这是小狗页面</h2></div>'
+            }
+        },
+        {
+            path:'/dog_family',
+            name:'/family',
+            component:{
+                template:'<div><h2>这是小狗之家页面</h2></div>'
+            }
+        }
+    ];
+
+
+    let router = new VueRouter({
+        routes:url
+    });
+
+
+    const num = new Vue({
+        el:'#num',
+        router:router
+    })
+</script>
+</body>
+</html>

@@ -2,11 +2,11 @@
 自定义分页组件
 可以返回分页的数据和分页的HTML代码
 """
-
+from django.http import QueryDict
 
 class Pagination(object):
 
-    def __init__(self, current_page, total_count, url_prefix, per_page=10, show_page=9):
+    def __init__(self, current_page, total_count, url_prefix, query_dict=QueryDict(mutable=True), per_page=10, show_page=9):
         """
         初始化分分页器
         :param url_prefix: a标签的URL前缀
@@ -17,6 +17,7 @@ class Pagination(object):
         """
         # 0.分页的URL前缀
         self.url_prefix = url_prefix
+        self.query_dict = query_dict
         # 1. 每一页显示10条数据
         self.per_page = per_page
         # 2. 计算需要多少页
@@ -72,34 +73,39 @@ class Pagination(object):
         # 添加分页代码的前缀
         page_list.append('<nav aria-label="Page navigation"><ul class="pagination">')
         # 添加首页
-        page_list.append('<li><a href="{}?page=1">首页</a></li>'.format(self.url_prefix))
+        self.query_dict['page'] = 1
+        page_list.append('<li><a href="{}?{}">首页</a></li>'.format(self.url_prefix,self.query_dict.urlencode()))
         # 添加上一页
         if self.current_page - 1 < 1:  # 已经到头啦，不让点上一页啦
             page_list.append(
                 '<li class="disabled"><a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>')
         else:
+            self.query_dict['page'] = self.current_page - 1
             page_list.append(
-                '<li><a href="{}?page={}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>'.format(
+                '<li><a href="{}?{}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>'.format(
                     self.url_prefix,
-                    self.current_page - 1))
+                    self.query_dict.urlencode()))
         for i in range(show_page_start, show_page_end + 1):
+            self.query_dict['page'] = i
             if i == self.current_page:
-                s = '<li class="active"><a href="{1}?page={0}">{0}</a></li>'.format(i, self.url_prefix)
+                s = '<li class="active"><a href="{1}?{2}">{0}</a></li>'.format(i, self.url_prefix,self.query_dict)
             else:
-                s = '<li><a href="{1}?page={0}">{0}</a></li>'.format(i, self.url_prefix)
+                s = '<li><a href="{1}?{2}"">{0}</a></li>'.format(i, self.url_prefix,self.query_dict.urlencode())
             page_list.append(s)
         # 添加下一页
         if self.current_page + 1 > self.total_page:
             page_list.append(
                 '<li class="disabled"><a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>')
         else:
+            self.query_dict['page'] = self.current_page + 1
             page_list.append(
                 '<li><a href="{}?page={}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>'.format(
                     self.url_prefix,
-                    self.current_page + 1)
+                    self.query_dict.urlencode())
             )
         # 添加尾页
-        page_list.append('<li><a href="{}?page={}">尾页</a></li>'.format(self.url_prefix, self.total_page))
+        self.query_dict['page'] = self.total_page
+        page_list.append('<li><a href="{}?{}">尾页</a></li>'.format(self.url_prefix, self.query_dict.urlencode()))
         # 添加分页代码的后缀
         page_list.append('</ul></nav>')
         page_html = ''.join(page_list)

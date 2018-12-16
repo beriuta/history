@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <div v-show="admin">管理员</div>
+    <div v-show="hr">人事</div>
+    <div v-show="class1">班级</div>
+    <div v-show="teacher">老师</div>
+    <div v-show="student">学生</div>
+    <button @click="my_click">点击显示或隐藏</button>
+    <h3 v-show="is_show">点击显示或隐藏</h3>
+</div>
+
+<script>
+    let num = new Vue({
+        el:'#num',
+        data:{
+            admin:true,
+            hr:false,
+            teacher:false,
+            class1:false,
+            student:true,
+            is_show:false
+
+        },
+        methods:{
+            my_click:function () {
+                this.is_show = !this.is_show
+            }
+        }
+    })
+</script>
+</body>
+</html>

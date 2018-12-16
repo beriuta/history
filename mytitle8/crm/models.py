@@ -4,6 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from multiselectfield import MultiSelectField
 from django.utils.safestring import mark_safe
 
+
 # 课程
 course_choices = (('Linux', 'Linux中高级'),
                   ('PythonFullStack', 'Python高级全栈开发'),
@@ -88,14 +89,14 @@ class Customer(models.Model):
     # 外键关联
     consultant = models.ForeignKey('UserProfile', verbose_name="销售", related_name='customers', blank=True, null=True, )
     # 多对多关联
-    class_list = models.ManyToManyField('ClassList', verbose_name="已报班级", null=True,blank=True)
+    class_list = models.ManyToManyField('ClassList', verbose_name="已报班级", null=True, blank=True)
 
     class Meta:
         verbose_name = '客户'
         verbose_name_plural = '客户'
 
     def __str__(self):
-        return '{}_{}'.format(self.name,self.qq)
+        return '{}_{}'.format(self.name, self.qq)
 
     # 自定义类的方法
     def show_class_list(self):
@@ -105,7 +106,7 @@ class Customer(models.Model):
     def show_status(self):
         _status_color = {
             'signed': "blue",
-            'unregistered':"red",
+            'unregistered': "red",
             'studying': 'orange',
             'paid_in_full': "green"
         }
@@ -156,14 +157,13 @@ class ClassList(models.Model):
     class_type = models.CharField(choices=class_type_choices, max_length=64, verbose_name='班额及类型', blank=True,
                                   null=True)
 
-
     class Meta:
         unique_together = ("course", "semester", 'campuses')
         verbose_name = '班级表'
-        verbose_name_plural =verbose_name
+        verbose_name_plural = verbose_name
 
     def __str__(self):
-        return '{}-{}-{}'.format(self.get_course_display(),self.semester,self.campuses)
+        return '{}-{}-{}'.format(self.get_course_display(), self.semester, self.campuses)
 
 
 class ConsultRecord(models.Model):
@@ -240,6 +240,9 @@ class CourseRecord(models.Model):
 
     class Meta:
         unique_together = ('re_class', 'day_num')
+
+    def show_name(self):
+        return '{}---day{}'.format(self.re_class, self.day_num)
 
 
 class StudyRecord(models.Model):
@@ -349,5 +352,6 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):  # __unicode__ on Python 2
         return self.email
+
     # 给ORM添加管理类
     objects = UserManager()

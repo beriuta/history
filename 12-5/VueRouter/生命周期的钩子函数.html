@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue_router.js"></script>
+</head>
+<body>
+<div id="num">
+    {{name}}
+</div>
+<script>
+    const num = new Vue({
+        el:'#num',
+        data:{
+            name:'银河系'
+        },
+        methods:{
+            init:function () {
+                console.log(123)
+            }
+        },
+        beforeCreate(){  //执行事件钩子
+            console.group('BeforeCreate');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        },
+        created(){
+            console.group('Create');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        },
+        beforeMount(){
+            console.group('beforeMount');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        },
+        mounted(){
+            console.group('mounted');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        },
+        beforeUpdate(){
+            console.group('beforeUpdate');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        },
+        updated(){
+            console.group('updated');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        },
+        beforeDestroy(){
+            console.group('beforeDestroy');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        },
+        destroyed(){
+            console.group('destroyed');
+            console.log(this.$el);
+            console.log(this.name);
+            console.log(this.init);
+        }
+    })
+</script>
+</body>
+</html>

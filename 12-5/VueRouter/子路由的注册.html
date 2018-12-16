@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue_router.js"></script>
+</head>
+<body>
+<div id="num">
+    <router-link to="/">银河系</router-link>
+    <router-link to="/pul">彗星</router-link>
+    <router-view></router-view>
+</div>
+
+<script>
+    let url = [
+        {
+            path:'/',
+            component:{
+                template:'<div><h3>这是银河系</h3></div>'
+            }
+        },
+        {
+            path:'/pul',
+            redirect:{name:'comet'},  // 重定向
+            component:{
+                template:`<div>
+                            <h3>这是彗星</h3>
+                            <hr>
+                            <router-link :to="{name:'comet'}">这是彗星的慧核</router-link>
+                            <router-link to="/huifa">这是彗星的慧发</router-link>
+                            <router-link to="/huiwei">这是彗星的慧尾</router-link>
+                            <router-view></router-view>
+                            </div>`
+            },  //彗核、彗发、彗尾
+            children:[
+                {
+                    path:'/huihe',
+                    name:'comet',
+                    component:{
+                        template: `<div><h3>这是慧核</h3></div>`
+                    }
+
+                },
+                {
+                    path:'/huifa',
+                    component:{
+                        template: `<div><h3>这是慧发</h3></div>`
+                    }
+
+                },
+                {
+                    path:'/huiwei',
+                    component:{
+                        template: `<div><h3>这是慧尾</h3></div>`
+                    }
+
+                }
+            ]
+        },
+    ];
+
+
+    let router = new VueRouter({
+        routes:url
+    });
+
+    const num = new Vue({
+        el:'#num',
+        router:router
+    })
+</script>
+</body>
+</html>

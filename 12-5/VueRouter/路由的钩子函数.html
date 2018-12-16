@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue_router.js"></script>
+    <!--只要点击查看动物类别,就跳转到动物之家-->
+</head>
+<body>
+<div id="num">
+    <router-link to="/">首页</router-link>
+    <router-link to="/cat">猫</router-link>
+    <router-link to="/dog">狗</router-link>
+    <router-link to="/animal_family">动物之家</router-link>
+    <router-link to="/animal">动物种类</router-link>
+    <router-view></router-view>
+</div>
+
+<script>
+
+    let url = [
+        {
+            path: '/',
+            component: {
+                template: `<div><h3>首页页面</h3>
+                            <button @click="my_click">点击跳转动物之家页面</button></div>`,
+                methods: {
+                    my_click() {
+                        // 点击跳转登录之家页面
+                        this.$router.push('/animal_family')  // 当点击跳转到动物之家页面
+                    }
+                }
+            }
+        },
+        {
+            path: '/cat',
+            component: {
+                template: `<div><h3>猫子页面</h3></div>`
+            }
+        },
+        {
+            path: '/dog',
+            meta: {
+                required_animal: true  // 原信息的配置 required_login 可以随便写
+            },
+            component: {
+                template: `<div><h3>狗子页面</h3></div>`
+            }
+        },
+        {
+            path: '/animal_family',
+            component: {
+                template: `<div><h3>动物之家页面</h3></div>`
+            }
+        },
+        {
+            path: '/animal',
+
+            component: {
+                template: `<div><h3>动物种类页面</h3></div>`
+            }
+        },
+    ];
+
+    let router = new VueRouter({
+        routes: url,
+        // mode:'history'
+    });
+
+    router.beforeEach(function (to, from, next) {
+        console.log(to);  // 获取到要跳转的下一个路由
+        console.log(from);  // 获取到经由哪个路由进来的
+        console.log(next);  // 对于上面两个获取的内容做一些操作,是一个方法
+
+        if (to.meta.required_animal) {  // 获取到路由是跳转到dog的时候,先跳转到动物种类
+            next('/animal')
+        }
+        next()
+    });
+    router.afterEach(function (to,from) {
+            // 只能获取$router的一些静态信息
+    })
+
+
+    const num = new Vue({
+        el: '#num',
+        router: router
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="num">
+    <parent></parent>
+</div>
+
+<script>
+    let child_component = {
+        template: `
+        <div>
+        <h2>这是一个子组件</h2>
+        <button @click="my_click"> 点击跟上面说话</button>
+        </div>
+        `,
+        methods:{
+            my_click(){
+                this.$emit('child_say','瞅啥瞅')
+            }
+        }
+    };
+
+
+    let parent_component = {
+        template:`<div>
+                  <h3>这是一个父组件</h3>
+                  <child @child_say="my_child"></child>
+                  <p>这是儿子说话的地方:{{ say }}</p>
+                  </div>`,
+        components: {
+            child:child_component
+        },
+        data(){
+            return {
+                say:''
+            }
+        },
+        methods: {
+            my_child:function (data) {
+                console.log(data);
+                this.say = data  // 获取到子组件传来的消息
+            }
+        }
+    };
+
+
+    const num = new Vue({
+        el:'#num',
+        components:{
+            parent: parent_component
+        }
+    })
+</script>
+</body>
+</html>

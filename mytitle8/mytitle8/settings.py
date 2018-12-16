@@ -130,3 +130,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 AUTH_USER_MODEL = 'crm.UserProfile'
+
+# 销售的似乎限制数
+CUSTOMER_NUM_LIMIT = 10

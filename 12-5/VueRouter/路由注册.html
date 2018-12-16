@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue_router.js"></script>
+</head>
+<body>
+<div id="num">
+    <router-link to="/">首尔</router-link>
+    <router-link to="/course">免费课程</router-link>
+    <router-view></router-view>
+</div>
+
+<script>
+    let url = [
+        {
+            path:'/',
+            component:{
+                template:`<div><h3>这是首页组件</h3></div>
+`
+            }
+        },
+        {
+            path:'/course',
+            component:{
+                template:`<div><h3>这是课程组件</h3></div>
+`
+            }
+        }
+    ];
+    // 实例化vueRouter对象
+    let router = new VueRouter({
+        routes:url
+    });
+    // 注册到vue的根目录里
+    const num = new Vue({
+        el:'#num',
+        router:router
+    })
+</script>
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue_router.js"></script>
+    <style>
+        .my_style{
+            position: fixed;
+            bottom:0;
+
+        }
+    </style>
+</head>
+<body>
+<div id="num">
+    <router-link to="/">这是银河</router-link>
+    <router-link to="/comet">这是彗星</router-link>
+    <router-link to="/comet2">这是彗星2</router-link>
+    <router-view name="head" class="my_style1"></router-view>
+    <router-view name="footer" class="my_style"></router-view>
+    <router-view></router-view>
+</div>
+
+<script>
+    let url = [
+        {
+            path:'/',
+            component:{
+                template:`<div><h3>这是银河</h3></div>`
+            }
+        },
+        {
+            path:'/comet',
+            component:{
+                template:`<div><h3>这是彗星</h3></div>`
+            }
+        },
+        {
+            path:'/comet2',
+            components:{
+                head:{
+                    template:`<div><h3>这是彗头</h3></div>`
+                },
+                footer:{
+                    template:`<div>这是彗尾</div>`
+                }
+            }
+        }
+    ];
+
+
+    let router = new VueRouter({
+        routes:url
+    });
+
+    const num = new Vue({
+        el:'#num',
+        router:router
+    })
+</script>
+</body>
+</html>

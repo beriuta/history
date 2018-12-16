@@ -57,7 +57,7 @@
                             <td>{{ record.status }}</td>
                             <td>{{ record.consultant.name }}</td>
                             <td>{{ record.date }}</td>
-                            <td><a href="{% url 'edit_record' record.id %}"><i class="fa fa-edit"
+                            <td><a href="/edit_consult_record/{{ record.id }}"><i class="fa fa-edit"
                                                                                    aria-hidden="true"></i></a></td>
                         </tr>
                     {% endfor %}
